@@ -1,0 +1,28 @@
+.courses {
+  padding-top: 5.5%;
+  padding-bottom: 4%;
+}
+
+.courses__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 5%;
+}
+
+.courses__suptitle.suptitle {
+  margin-bottom: 8px;
+}
+
+.courses__cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.cources__card-wrap {
+  width: 50%;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}/*# sourceMappingURL=courses.css.map */

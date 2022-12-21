@@ -1,0 +1,45 @@
+- 
+    const courses = [
+        {
+            name: "All",
+            num: "17",
+        },
+        {
+            name: "Marketing",
+            num: "4"
+        },
+        {
+            name: "Management",
+            num: "3"
+        },
+        {
+            name: "HR & Recruting",
+            num: "5",
+        },
+        {
+            name: "Design",
+            num: "2"
+        },
+        {
+            name: "Development",
+            num: "3"
+        },
+    ];
+
+mixin onlineCourses(page='courses')
+    section.online-courses
+        .online-courses__shapes
+        .online-courses__dots
+        .container
+            +header
+            .online-courses__head
+                .online-courses__suptitle.suptitle Enjoy your studying!
+                .online-courses-_title.title Our online courses
+            +tab(courses, 'courses-tabs')
+            .online-courses__more
+                .online-courses__more-pic
+                    img.online-courses__more-img(src=require('../../assets/images/Convert.png'))
+                .online-courses__text.js-online__courses Load more
+    .online-courses__slider
+        .container
+            +testimonSlider

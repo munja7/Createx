@@ -1,0 +1,254 @@
+
+// $font-lato: 'Lato', sans-serif;
+// $font-lato-bold: 'Lato-Bold', sans-serif;
+// $font-lato-black: 'Lato-Black', sans-serif;
+
+// $font-weight-thin: 100;           // Thin (Hairline)
+// $font-weight-extra-light: 200;    // Extra Light (Ultra Light)
+// $font-weight-light: 300;          // Light
+// $font-weight-normal: 400;         // Regular (normal)
+// $font-weight-medium: 500;         // Medium
+// $font-weight-semi-bold: 600;      // Semi Bold (Demi Bold)
+// $font-weight-bold: 700;           // Bold
+// $font-weight-extra-bold: 800;    // Extra Bold (Ultra Bold)
+// $font-weight-black: 900;        // Black (Heavy)
+
+//Gastro colors
+// $primary: #FF3F3A;
+// $btn-gradient: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+// $secondary: #FFCF2D;
+// $success: #03CEA4;
+// $danger: #FF4242;
+// $warning: #F89828;
+// $info: #5A87FC;
+
+body{
+  font-family: 'Lato';
+  margin: 0;
+  padding: 0;
+}
+  
+
+button{
+  border: 0;
+  background: none;
+}
+  
+
+ol, ul, li, nav {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+  
+
+p, ul, li, h1, h2{
+  margin: 0;
+  padding: 0;
+}
+  
+
+* {
+  box-sizing: border-box;
+}
+  
+
+img {
+  width: 100%;
+  height: auto;
+}
+  
+
+.container{
+  width: 100%;
+  max-width: 1260px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.btn{
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+  color: white;
+  border-radius: 4px;
+  font-family: 'Lato-Bold';
+}
+
+.btn--large{
+  height: 52px;
+  font-size: 16px;
+  padding: 0 40px;
+}
+  
+
+.btn--regular{
+  height: 44px;
+  font-size: 14px;
+  padding: 0 32px;
+}
+
+.btn--small{
+  height: 36px;
+  font-size: 12px;
+  padding: 0 24px;
+}
+
+.btn-outline
+{
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+  color: transparent;
+  background-clip: text;
+  border-radius: 4px;
+  font-family: 'Lato-Bold';
+  border: 1px solid #FF3F3A;
+  cursor: default;
+}
+
+.btn-outline:hover
+{
+  background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+  color: white;
+}
+
+
+.btn-icon
+
+//buttons with icon
+// .button-icon-large,
+// .button-icon-regular,
+// .button-icon-small
+// {
+//   display: flex;
+//   align-items: center;
+//   background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+//   color: white;
+//   border-radius: 4px;
+//   font-family: 'Lato-Bold';
+//   transition: color background 1s;
+// }
+// .button-icon-large:hover,
+// .button-icon-regular:hover,
+// .button-icon-regular:hover
+// {
+//   background: #fff;
+//   color: #FF3F3A;
+//   border: 1px solid #FF3F3A;
+//   transition: color background .7s;
+// }
+
+.button-icon-large{
+  height: 52px;
+  font-size: 16px;
+  padding: 0 40px;
+  position: relative;
+  &:after{
+    content: '';
+    width: 24px;
+    height: 24px;
+    right: 3%;
+    position: absolute;
+    background-image: url('../assets/images/Right-big.png');
+    background-repeat: no-repeat;
+  }
+  &:hover:after{
+    background-image: url('../assets/images/Right-big-color.png');
+    background-repeat: no-repeat;
+  }
+}
+
+.button-icon-regular{
+  height: 44px;
+  font-size: 14px;
+  padding: 0 32px;
+  &:after{
+    content: '';
+    width: 16px;
+    height: 16px;
+    left: 170px;
+    position: absolute;
+    background-image: url('../assets/images/Right-reg.png');
+    background-repeat: no-repeat;
+  }
+  &:hover:after{
+    background-image: url('../assets/images/Right-reg-color.png');
+    background-repeat: no-repeat;
+  }
+}
+
+.button-icon-small{
+  height: 36px;
+  font-size: 12px;
+  padding: 0 24px;
+}
+
+.title{
+  font-family: 'Lato-Black';
+  font-size: 46px;
+  line-height: 130%;
+  color: #1E212C;
+}
+
+.suptitle{
+  font-family: 'Lato-Bold';
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #1E212C;
+}
+
+.bage{
+  display: inline-block;
+  line-height: 150%;
+  font-size: 14px;
+  color: #FFFFFF;
+  border-radius: 4px;
+  text-align: center;
+  padding: 0 8px
+}
+
+.bage--green{
+  background: #03CEA4;
+}
+
+.bage--blue{
+  background: #5A87FC;
+}
+
+.bage--orange{
+  background: #F89828;
+}
+
+.bage--pink{
+  background: #F52F6E;
+}
+
+.bage--violet{
+  background: #7772F1;
+}
+  
+// .description-text
+//   font-family: $font-circular
+//   font-size: 20px
+//   line-height: 160%
+//   color: $subtext-color
+
+// .button
+//   width: 243px
+//   background: $suptitle-color
+//   border-radius: 31px
+//   filter: drop-shadow(0px 20px 40px rgba(255, 148, 1, 0.2))
+
+

@@ -1,0 +1,31 @@
+- 
+    const times = 
+    [
+        {num: '06', text: 'Days'}, 
+        {num: '18', text: 'Hours'}, 
+        {num: '24', text: 'Mins'}, 
+        {num: '12', text: 'Sec'}
+    ];
+
+mixin discount()
+    section.discount
+        .container
+            .discount__content
+                .discount__head
+                    h2.discount__title.title 20% discount for early birds!
+                    .discount__times
+                        each time in times
+                            .discount__times-wrap
+                                .discount__times-num= time.num
+                                .discount__times-text= time.text
+                form.discount__form(action="discount")
+                    label.discount__label Full Name
+                        input.discount__input(type="text", placeholder="Your fuul Name", required)
+                    label.discount__label Email 
+                        input.discount__input(type="email", placeholder="Your working email", required)
+                    label.discount__label Phone
+                        input.discount__input(type="phone", placeholder="Your phone number", required)
+                    button.discount__btn.btn.btn--regular(type="submit") Join the course
+                    
+                    
+            

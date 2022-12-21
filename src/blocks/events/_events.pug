@@ -1,0 +1,20 @@
+- 
+    let tasks = [
+        { day: '05', month: 'August', time: '11:00 – 14:00', title: 'Formation of the organizational structure of the company in the face of uncertainty.', name:'Onine master-class'},
+        { day: '24', month: 'July', time: '11:00 – 12:30', title: 'Building a customer service department. Best Practices.', name:'Onine lecture'},
+        { day: '16', month: 'July', time: '11:00 – 13:00', title: 'How to apply methods of speculative design in practice. Worldbuilding prototyping.', name:'Onine workshop'}
+    ];
+
+mixin events(page='Home')
+    section.events
+        .container
+            .events__wrap-title
+                .events__suptitle.suptitle Our Events
+                .events__title.title Lectures & workshops
+            .events__cards
+                each task in tasks
+                    +event-card(task.day, task.month, task.time, task.title, task.name)
+            .events__explore-wrap
+                .events__explore-text Do you want more?
+                a.btn.btn--large.events__explore-btn(href="#") Explore all events
+        .events__decor-circles    

@@ -1,0 +1,60 @@
+.subscribe {
+  background: linear-gradient(55.95deg, rgba(255, 63, 58, 0.2) 0%, rgba(247, 94, 5, 0.2) 100%);
+  padding-top: 7.7%;
+  padding-bottom: 11.5%;
+  position: relative;
+}
+
+.subscribe__wrap {
+  margin: 0 auto;
+  max-width: 810px;
+  width: 100%;
+  text-align: center;
+}
+
+.subscribe__suptitle {
+  margin-bottom: 8px;
+}
+
+.subscribe__title {
+  margin-bottom: 60px;
+  line-height: 130%;
+}
+
+.subscribe__form {
+  display: flex;
+  justify-content: center;
+}
+
+.subscribe__input {
+  font-family: inherit;
+  background: #FFFFFF;
+  border: 1px solid #D7DADD;
+  border-radius: 4px;
+  margin-right: 24px;
+  width: 422px;
+  height: 52px;
+  padding-left: 16px;
+  font-size: 16px;
+  color: #9A9CA5;
+}
+.subscribe__input:focus {
+  outline: none;
+}
+
+.subscribe__button {
+  width: 154px;
+}
+
+.subscribe__decore-left,
+.subscribe__decore-right {
+  width: 354px;
+  height: 246px;
+  bottom: 0;
+  position: absolute;
+  background: url("../../assets/images/subscribe-decore.png");
+}
+
+.subscribe__decore-right {
+  right: 0;
+}/*# sourceMappingURL=subscribe.css.map */

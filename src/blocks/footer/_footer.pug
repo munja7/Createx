@@ -1,0 +1,50 @@
+- 
+    let footerText = 
+    [
+        {title: 'Site map', links: ['About Us', 'Courses', 'Events', 'Blog', 'Contacts'] },
+        {title: 'COURSES', links: ['Marketing', 'Management', 'HR & Recruting', 'Design', 'Development'] },
+        //- {title: 'CONTACT US', elements: ['(405) 555-0128', 'hello@createx.com'] }
+        
+    ];
+- 
+    let icons = ['Facebook.svg', 'Twitter.svg', 'youTube.svg', 'telegram.svg', 'Instagram.svg', 'Linked-In.svg'];
+
+mixin footer(page='Home')
+    footer.footer
+        .container
+            .footer__content
+                .footer__info
+                    .footer__logo
+                        img.footer__logo-img(src=require("../../assets/images/logo-footer.png"), alt="Logo")
+                    p.footer__descr
+                        | Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts. We provide relevant approaches to online learning, internships and employment in the largest companies in the country. 
+                    .footer__icons
+                        each icon in icons
+                            .footer__icon
+                                img.footer__icon-img(src=require(`../../assets/images/${icon}`))
+                .footer__menu
+                    each footerItem in footerText
+                        ul.footer__list
+                            li.footer__title= footerItem.title
+                                each element in footerItem.links
+                                    li.footer__list-item
+                                        a.footer__social-link(href="#")= element  
+                    ul.footer__list
+                        li.footer__title CONTACT US
+                        li.footer__list-item.footer__list-phone (405) 555-0128
+                        li.footer__list-item.footer__list-mail hello@createx.com
+
+                .footer__sign-up
+                    .footer__title.footer__sign-up-title SIGN UP TO OUR NEWSLETTER
+                    form.footer__form(action="")
+                        .input-outer-padding
+                            input.footer__form-inp(type="email", placeholder="Email address")
+                            button.footer__form-btn(type="submit")
+                    .footer__sign-up-sup *Subscribe to our newsletter to receive communications and early updates from Createx SEO Agency.
+        .footer__copyrights
+            .footer__copyrights-content
+                .footer__copyrights-left
+                    | © All rights reserved. Made with 
+                    span.footer__heart
+                    | by Createx Studio
+                a.footer__copyrights-right(href="#") GO TO TOP

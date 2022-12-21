@@ -1,0 +1,24 @@
+- var statistic = [ {num: 1200, text: 'Students graduated'}, {num: 84, text: 'Completed courses'}, {num: 16, text: 'Qualified tutors'}, {num: 5, text: 'Years of experience'},];
+
+mixin main(page='Home')
+    section.main
+        +header
+        .container
+            .main__textwrap
+                .main__text
+                    .main__play-wrap
+                        a.main__play-btn(href="#")
+                        .main__play-text Play showreel
+                    h1.title.main__title Enjoy studying with Createx Online Courses
+                    .main__buttons
+                        a.btn-outline.btn--large.main__about-btn(href='#') About us
+                        a.btn.btn--large.main__explore-btn(href='#') Explore courses
+                .main__picture
+            .main__statistic
+                ul.main__statistic-list
+                    each item in statistic
+                        li.main__statistic-item
+                            .main__statistic-num= item.num
+                            .main__statistic-text= item.text
+                        li.main__statistic-dot
+        

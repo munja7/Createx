@@ -1,0 +1,74 @@
+.program
+
+.program__left
+    width: 100%
+    max-width: 656px
+
+.program__pic
+    width: 495px
+    height: 554px
+    background-image: url('../../assets/images/program-image.png')
+
+.program__head-wrap
+    margin-bottom: 60px
+
+.program__suptitle
+.program__title
+
+.program__content
+    display: flex
+    justify-content: space-between
+    padding-bottom: 120px
+
+.program__accordion
+    &__accordion-item 
+        border-bottom: 1px solid gray
+        &__accordion-btn[aria-expanded='true'] 
+            border-bottom: 1px solid blue
+    
+.program__accordion-btn
+    display: flex
+    align-items: center
+    margin-bottom: 16px
+    &:hover, &:focus
+        cursor: pointer
+
+.program__accordion-lesson
+    font-size: 20px
+    line-height: 150%
+    color: #FF3F3A
+    margin-right: 8px
+
+.program__accordion-title
+    font-weight: 700
+    font-size: 20px
+    line-height: 150%
+    color: #1E212C
+
+.program__accordion-icon
+    width: 20px
+    height: 20px
+    margin-right: 20px
+    background-image: url('../../assets/images/Plus.png')
+
+.program__accordion-btn[aria-expanded='true']
+    .program__accordion-icon
+        background-image: url('../../assets/images/Minus.png')
+    +.program__accordion-content
+        opacity: 1
+        max-height: 104px
+        margin-bottom: 16px
+        transition: all 200ms linear
+        will-change: opacity, max-height
+    
+.program__accordion-content
+    opacity: 0
+    max-height: 0
+    overflow: hidden
+    transition: opacity 200ms linear, max-height 200ms linear
+    will-change: opacity, max-height
+    padding-left: 40px
+    .program__accordion-text
+        font-size: 16px
+        line-height: 160%
+        color: #424551

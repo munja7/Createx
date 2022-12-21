@@ -1,0 +1,38 @@
+- 
+    const boardCourse = 
+        [
+             {title: 'dates', date: 'Sept 7 – Nov 2', text: 'Metus turpis sit lorem lacus, in elit tellus lacus.'},
+             {title: 'duration', date: '2 months – 8 lessons', text: 'Rhoncus pellentesque auctor auctor orci vulputate faucibus quis ut.'},
+             {title: 'price', date: '$120 per month', text: 'Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis.'}
+        ];
+- 
+    const learnList = 
+        [
+            'A fermentum in morbi pretium aliquam adipiscing donec tempus.', 
+            'Vulputate placerat amet pulvinar lorem nisl.',
+            'Consequat feugiat habitant gravida quisque elit bibendum id adipiscing sed.',
+            'Etiam duis lobortis in fames ultrices commodo nibh.',
+            'Fringilla in nec risus congue venenatis pretium posuere nec.',
+            'Cursus eu pretium, vulputate tempus quam massa sed at.'
+        ];
+
+
+mixin aboutCourse()
+    section.about-course
+        .container
+            .about-course__content
+                .about-course__left
+                    h3.about-course__title.title About the course
+                    p.about-course__descr Bibendum vulputate adipiscing venenatis at est, a eu tincidunt. Leo aenean congue in sagittis, felis maecenas amet varius at. Pellentesque euismod in faucibus at elementum. Tellus maecenas libero est tempus sit cras at malesuada diam. Consequat senectus dictumst non hac dignissim montes, pretium, egestas molestie. Sed magna aliquet ornare nibh vel lectus diam eget pretium. Lorem risus nunc tincidunt tortor, mi nulla pellentesque
+                    h4.about-course__list-title You will learn:
+                    ul.about-course__list
+                        each learn in learnList
+                            li.about-course__item= learn 
+                .about-course__right
+                    .about-course__board
+                        each board in boardCourse
+                            .about-course__board-content
+                                .about-course__board-title= board.title
+                                .about-course__board-date= board.date
+                                .about-course__board-text= board.text
+                        a.about-course__btn.btn.btn--regular(href="#") Join the course

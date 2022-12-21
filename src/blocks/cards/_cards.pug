@@ -1,0 +1,11 @@
+mixin card(bageColor= cls, image= img, bageText= bageText, titleText= title, price= price, name= name, cls= '', pic= '')
+    .card(class= cls)
+        .card__pic(class= pic)
+            img.card__img(src=require(`../../assets/images/${image}`))
+        .card__text
+            .bage.card__bage(class= bageColor)= bageText
+            .card__title= titleText
+            .card__pricewrap
+                .card__price= price
+                .card__name= name
+

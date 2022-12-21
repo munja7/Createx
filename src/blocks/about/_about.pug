@@ -1,0 +1,16 @@
+- let list = ['A fermentum in morbi pretium aliquam adipiscing donec tempus.', 'Vulputate placerat amet pulvinar lorem nisl.', 'Consequat feugiat habitant gravida quisque elit bibendum id adipiscing sed.', 'Etiam duis lobortis in fames ultrices commodo nibh.', 'Tincidunt sagittis neque sem ac eget.', 'Ultricies amet justo et eget quisque purus vulputate dapibus tortor.' ];
+
+mixin about(page='Home')
+    section.about
+        .container
+            .about__wrap
+                .about__pic
+                .about__text
+                    .about__suptittle.suptitle Who we are
+                    h2.about__title.title Why Createx?
+                    ul.about__list
+                        each item in list
+                            li.about__item= item
+                    a.about__btn.btn.btn--regular(href="#") More about us
+        .about__decor-dots
+        .about__decor__circle

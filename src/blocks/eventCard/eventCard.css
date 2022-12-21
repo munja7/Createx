@@ -1,0 +1,64 @@
+.events__cards {
+  margin-bottom: 60px;
+}
+
+.event-card {
+  display: flex;
+  padding: 32px 40px;
+  background: white;
+  align-items: center;
+  margin-bottom: 24px;
+  justify-content: space-between;
+  transition: box-shadow 0.5s ease;
+}
+.event-card:hover {
+  position: relative;
+  box-shadow: 0px 80px 80px -20px rgba(255, 63, 58, 0.16), 0px 30px 24px -10px rgba(255, 63, 58, 0.1), 0px 12px 10px -6px rgba(255, 63, 58, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+}
+
+.event-card__wrap {
+  width: 180px;
+  display: flex;
+  align-items: center;
+}
+
+.event-card__day {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 130%;
+  letter-spacing: 1px;
+  color: #FF3F3A;
+  margin-right: 20px;
+}
+
+.event-card__month {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  color: #1E212C;
+}
+
+.event-card__time {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #787A80;
+}
+
+.event-card__title-wrap {
+  width: 100%;
+  max-width: 760px;
+}
+
+.event-card__task-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  color: #1E212C;
+}
+
+.event-card__task-type {
+  font-size: 16px;
+  line-height: 160%;
+  color: #787A80;
+}/*# sourceMappingURL=eventCard.css.map */

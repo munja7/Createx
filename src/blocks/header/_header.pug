@@ -1,0 +1,30 @@
+- 
+    let navlinks = 
+    [
+        { linkName: 'About Us', link: '#' }, 
+        { linkName: 'Courses', link: '/courses.html' }, 
+        { linkName: 'Events', link: '/events.html' },
+        { linkName: 'Blog', link: '#' },
+        { linkName: 'Contacts', link: '#'}
+    ];
+
+mixin header(page='Home')
+    header.header
+        .container
+            .header__wrap
+                a.header__logo(href="/")
+                    img.header__logo-img(src=require("../../assets/images/logo.png"), alt="logo-img")
+                nav.header-nav__list
+                    each linkItem in navlinks
+                        li.header-nav__item
+                            a.header-nav__item-link(href= linkItem.link)= linkItem.linkName
+                .header__actions-wrap
+                    a.header__link.btn.btn--large(href="#") Get consultation
+                    .header__actions
+                        .header__profile-icon
+                        button.header__login(type="button") Log in
+                        span /
+                        button.header__registration(type="button") Register
+
+
+           

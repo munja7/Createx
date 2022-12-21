@@ -1,0 +1,37 @@
+// - let buttons = ['Experienced Tutors', 'Feedback & Support', '24/7 Online Library', 'Community'];
+- 
+    const benefits = [
+        {
+            name: "Experienced Tutors",
+            nameImg: "star.svg",
+            title: "Only practicing tutors",
+            descr: "Urna nisi, arcu cras nunc. Aenean quam est lobortis mi non fames dictum suspendisse. Morbi mauris cras massa ut dolor quis sociis mollis augue. Nunc, sodales tortor sit diam mi amet massa. Fermentum diam diam sociis vestibulum. Nulla nisl accumsan, id dignissim massa ut amet. Amet enim, nisi tempus vehicula.",
+        },
+            {
+            name: "Feedback & Support",
+            nameImg: "like.svg",
+            title: "Only practicing tutors",
+            descr: "Urna nisi, arcu cras nunc. Aenean quam est lobortis mi non fames dictum suspendisse. Morbi mauris cras massa ut dolor quis sociis mollis augue. Nunc, sodales tortor sit diam mi amet massa. Fermentum diam diam sociis vestibulum. Nulla nisl accumsan, id dignissim massa ut amet. Amet enim, nisi tempus vehicula.",
+        },
+            {
+            name: "24/7 Online Library",
+            nameImg: "layouts.svg",
+            title: "Only practicing tutors",
+            descr: "Urna nisi, arcu cras nunc. Aenean quam est lobortis mi non fames dictum suspendisse. Morbi mauris cras massa ut dolor quis sociis mollis augue. Nunc, sodales tortor sit diam mi amet massa. Fermentum diam diam sociis vestibulum. Nulla nisl accumsan, id dignissim massa ut amet. Amet enim, nisi tempus vehicula.",
+        },
+            {
+            name: "Community",
+            nameImg: "chat.svg",
+            title: "Only practicing tutors",
+            descr: "Urna nisi, arcu cras nunc. Aenean quam est lobortis mi non fames dictum suspendisse. Morbi mauris cras massa ut dolor quis sociis mollis augue. Nunc, sodales tortor sit diam mi amet massa. Fermentum diam diam sociis vestibulum. Nulla nisl accumsan, id dignissim massa ut amet. Amet enim, nisi tempus vehicula.",
+        }
+    ];
+
+mixin benefits(page='Home')
+    section.benefits
+        .container
+            .benefits__wrap-title
+                .benefits__suptitle.suptitle Our benefits
+                .benefits__title.title That’s how we do it
+            +tab(benefits, 'home-tabs')
+

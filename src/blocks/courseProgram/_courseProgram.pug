@@ -1,0 +1,33 @@
+- 
+    const accordionList = 
+    [
+        {title: 'Aliquet lectus urna viverra in odio.', text: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.'},
+        {title: 'Orci commodo, viverra orci mollis ut euismod.', text: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.'},
+        {title: 'Sagittis vitae facilisi rutrum amet mauris quisque vel.', text: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.'},
+        {title: 'In id dolor quis nunc, urna hendrerit pharetra.', text: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.'},
+        {title: 'Est, ut tempus id rutrum facilisi.', text: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.'},
+        {title: 'Amet nec in pellentesque.', text: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.'},
+        {title: 'Massa vel arcu mauris, id vel rhoncus mattis quis.', text: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.'},
+        {title: 'Neque, cursus sapien nullam id.', text: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.'}
+    ];
+
+mixin courseProgram()
+    section.program
+        .container
+            .program__content
+                .program__left
+                    .program__head-wrap
+                        .program__suptitle.suptitle course program
+                        h2.program__title.title What will you learn
+                    .program__accordion
+                        each item, index in accordionList
+                            .program__accordion-item
+                                button.program__accordion-btn(aria-expanded="false") 
+                                    span.program__accordion-icon(aria-hidden="true")
+                                    span.program__accordion-lesson= `Lesson ${index+1}.`
+                                    .program__accordion-title= item.title
+                                .program__accordion-content
+                                    p.program__accordion-text= item.text
+                .program__pic
+ 
+            

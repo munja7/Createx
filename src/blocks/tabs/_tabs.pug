@@ -1,0 +1,52 @@
+- 
+    let onlineCoursesCards = [
+        {bageColor: 'bage--green', img: 'image-service1.png', bageText: 'Marketing', title: 'The Ultimate Google Ads Training Course', price: '$100', name: 'by Jerome Bell'},
+        {bageColor: 'bage--blue', img: 'image-service2.png', bageText: 'Management', title: 'Prduct Management Fundamentals', price: '$480', name: 'by Marvin McKinney'},
+        {bageColor: 'bage--orange', img: 'image-service3.png', bageText: 'HR & Recruting', title: 'HR  Management and Analytics', price: '$200', name: 'by Leslie Alexander Li'},
+        {bageColor: 'bage--green', img: 'image-service4.png', bageText: 'Marketing', title: 'Brand Management & PR Communications', price: '$530', name: 'by Kristin Watson'},
+        {bageColor: 'bage--pink', img: 'image-service5.png', bageText: 'Design', title: 'Graphic Design Basic', price: '$500', name: 'by Guy Hawkins'},
+        {bageColor: 'bage--blue', img: 'image-service6.png', bageText: 'Management', title: 'Business Development Management', price: '$400', name: 'by Dianne Russell'},
+        {bageColor: 'bage--violet', img: 'image-service7.png', bageText: 'Development', title: 'Highload Software Architecture', price: '$600', name: 'by Brooklyn Simmons'},
+        {bageColor: 'bage--orange', img: 'image-service8.png', bageText: 'HR & Recruting', title: 'Human Resources – Selection and Recruitment', price: '$150', name: 'by Kathryn Murphy'},
+        {bageColor: 'bage--pink', img: 'image-service9.png', bageText: 'Design', title: 'User Experience. Human-centered Design', price: '$240', name: 'by Cody Fisher'}
+    ];
+
+mixin tab(tabs= [], tabPage= '')
+    if tabPage === 'home-tabs'
+        .tab__layout
+            each item, index in tabs
+                input(name="nav" class=`${index}-radio` type="radio" id=`${index}` checked=index == 0 )
+                .tab__page(class=`${index}-page`)
+                    .tab__page-contents
+                        .tab__content
+                            .tab__content-left
+                                .tab__content-title= item.title
+                                .tab__content-text= item.descr
+                            .tab__content-pic
+                label.tab__nav(for=`${index}`)
+                    img.tab__pic(src=require(`../../assets/images/${item.nameImg}`))
+                    span.tab__nav-text= item.name
+    else
+        .courses-tab__layout
+            each item, index in tabs
+                input(name="nav" class=`${index}-radio` type="radio" id=`${index}` checked=index == 0 )
+                .courses-tab__page(class=`${index}-page`)
+                    .courses-tab__page-contents
+                        .courses-tab__content
+                            .online-courses__cards
+                                each card in onlineCoursesCards
+                                    .online-courses__card-wrap
+                                        +card(
+                                            card.bageColor, 
+                                            card.img, card.bageText, 
+                                            card.title, card.price, 
+                                            card.name, 
+                                            'online-courses__card', 
+                                            'online-courses__card-pic')
+                label.courses-tab__nav(for=`${index}`)
+                    span.courses-tab__nav-text= item.name
+                        span.courses-tab__nav-num
+                            sup= item.num
+            form.online-courses__search(action="")
+                input.online-courses__inp(type="text" placeholder="Search course...")
+                button.online-courses__search-img(type="submit")

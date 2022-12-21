@@ -1,0 +1,34 @@
+// import "./categories";
+import "./header";
+import "./main";
+import "./about";
+import "./courses";
+import "./cards";
+import "./benefits";
+import "./events";
+import "./eventCard";
+import "./certificate";
+import "./tutors";
+import "./blog";
+import "./subscribe";
+import "./footer";
+import "./onlineCourses";
+import "./tabs";
+import "./testimonSlider";
+import "./course";
+import "./aboutCourse";
+import "./courseCurator";
+import "./process";
+import "./discount";
+import "./forWhome";
+import "./courseProgram";
+import "./registerCourse";
+import "./registerForm";
+import "./otherCourses";
+import "./eventList";
+import "./eventFilter";
+import "./eventGreed";
+
+export default () => {
+    console.log('init blocks');
+  };

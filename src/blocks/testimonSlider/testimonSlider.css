@@ -1,0 +1,92 @@
+.testimonial-swiper {
+  width: 1020px;
+}
+
+.testimon__head {
+  text-align: center;
+}
+
+.testimon__suptitle {
+  margin-bottom: 8px;
+}
+
+.testimon__title {
+  margin-bottom: 5%;
+}
+
+.testimon__container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.testimon__pagination {
+  text-align: center;
+}
+
+.testimon__slides {
+  background: #FFFFFF;
+  box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+  border-radius: 4px;
+  padding: 5% 8.7%;
+}
+
+.testimon__slide-content {
+  max-width: 810px;
+  width: 100%;
+  padding-left: 58px;
+}
+
+.testimon__comment {
+  font-size: 20px;
+  line-height: 150%;
+  color: #424551;
+  margin-bottom: 24px;
+}
+.testimon__comment::before {
+  content: " ";
+  position: relative;
+  top: 30px;
+  right: 50px;
+  background: url("../../assets/images/braces.png");
+  background-repeat: no-repeat;
+  display: block;
+  height: 28px;
+  width: 28px;
+}
+
+.testimon__autor-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.testimon__pic {
+  width: 72px;
+  height: 72px;
+  margin-right: 20px;
+}
+
+.testimon__name {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  color: #1E212C;
+}
+
+.testimon__course {
+  font-size: 14px;
+  line-height: 150%;
+  color: #787A80;
+}
+
+.testimon__pagination .swiper-pagination-bullet {
+  width: 30px;
+  height: 0px;
+  border: 3px solid #B3B7BC;
+  background: #B3B7BC;
+  border-radius: 2px;
+}
+
+.testimon__pagination .swiper-pagination-bullet-active {
+  border: 3px solid #424551;
+}/*# sourceMappingURL=testimonSlider.css.map */

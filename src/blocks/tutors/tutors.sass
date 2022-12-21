@@ -1,0 +1,260 @@
+.tutors
+    position: relative
+    padding-top: 8.4%
+    padding-bottom: 4.1%
+    background: #F4F5F7
+
+.tutors__decor-dots1,
+.tutors__decor-dots2
+    position: absolute
+    width: 143px
+    height: 105px
+    background: url('../../assets/images/dots-square.png')
+
+.tutors__decor-dots1
+    top: 35px
+    left: 65%
+
+.tutors__decor-dots2
+    bottom: 8%
+    left: 18%
+
+.tutors__decor-vector
+    position: absolute
+    width: 41px
+    height: 41px
+    top: 5%
+    left: 10.6%
+    background: url('../../assets/images/vector.png')
+
+.tutors__decor-shapes1
+    position: absolute
+    width: 78px
+    height: 96px
+    top: 33.5%
+    right: 0
+    background: url('../../assets/images/shapes1.png')
+
+.tutors__decor-shapes2
+    position: absolute
+    width: 87px
+    height: 47px
+    top: 59.3%
+    left: 61.5%
+    background: url('../../assets/images/shapes2.png')
+
+.tutors__decor-circles1
+    position: absolute
+    width: 145px
+    height: 145px
+    top: 53%
+    left: 3.9%
+    background: url('../../assets/images/circles.png')
+
+.tutors__decor-circles2
+    position: absolute
+    width: 132px
+    height: 163px
+    bottom: 0
+    right: 0
+    background: url('../../assets/images/circles-quadrant.png')
+    opacity: 0.6
+
+.tutors-slider
+    margin-bottom: 14.8%
+
+.tutors-slider__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.tutors-slider__text
+    margin-bottom: 60px
+
+.tutors-slider__suptitle
+    margin-bottom: 8px
+
+.tutors-slider__title.title
+.tutors-slider__arrows
+    display: flex
+    align-items: center
+
+.tutors-slider__arrow
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: background-color .3s
+    &:hover
+        transition: background-color .5s
+        background-color: #FF3F3A
+        .tutors-slider__arr-left,
+        .tutors-slider__arr-right
+            transition: filter .3s
+            filter: invert(92%) sepia(84%) saturate(2%) hue-rotate(172deg) brightness(110%) contrast(101%)
+
+.tutors-slider__arr-left,
+.tutors-slider__arr-right
+    width: 24px
+    height: 24px
+    transition: filter .3s
+
+.tutors-slider__arr-left
+    background-image: url('../../assets/images/prev-btn.png')
+    
+.tutors-slider__arr-right
+    background-image: url('../../assets/images/next-btn.png')
+
+.tutors-testimon__arrow
+    position: relative
+
+.tutors-slider__slides
+    display: flex
+    justify-content: space-between
+    text-align: center
+    min-width: 0
+
+.tutors-slider__slide
+    min-width: 0
+
+.tutors-slider__card
+    width: 285px
+
+.tutors-slider__slide-pic
+    position: relative
+    padding: 20px 20px 0 20px
+    background-color: #FFCF2D
+    margin-bottom: 16px
+    &:hover
+        .tutors-slider__pic-overlay
+            transition: height 0.4s, visibility 0s, opacity 0.4s linear
+            visibility: visible
+            opacity: 1
+            height: 100%
+
+.tutors-slider__pic-overlay
+    display: flex
+    position: absolute
+    width: 100%
+    height: 0
+    bottom: 0
+    align-items: flex-end
+    justify-content: flex-end
+    padding: 20px
+    background: linear-gradient(180deg, rgba(30, 33, 44, 0) 43.9%, rgba(30, 33, 44, 0.03) 55.21%, rgba(30, 33, 44, 0.33) 68.73%, rgba(30, 33, 44, 0.56) 76.17%, rgba(30, 33, 44, 0.768225) 83.75%, rgba(30, 33, 44, 0.92) 91.49%, #1E212C 100%)
+    border-radius: 4px
+    visibility: hidden
+    opacity: 0
+    transition: height 0.4s, visibility 0s, opacity 0.4s linear
+
+.tutors-slider__overlay-social
+    width: 20px
+    height: 20px
+    cursor: pointer
+
+.tutors-slider__overlay-social:not(:last-child)
+    margin-right: 12px
+
+.tutors-slider__overlay-img
+
+.tutors-slider__img
+    border-radius: 4px
+    vertical-align: bottom
+
+.tutors-slider__name
+    font-weight: 700
+    font-size: 20px
+    line-height: 150%
+    color: #424551
+    margin-bottom: 4px
+
+.tutors-slider__post
+    font-size: 16px
+    line-height: 160%
+    color: #787A80
+
+//testimonial slider           
+// .tutors-testimon
+// .testimonial-swiper
+//     width: 1020px
+
+// .tutors-testimon__arr-left
+// .tutors-testimon__head
+//     text-align: center
+
+// .tutors-testimon__suptitle
+//     margin-bottom: 8px
+
+// .tutors-testimon__title
+//     margin-bottom: 5%
+
+// .tutors-testimon__container
+//     display: flex
+//     align-items: center
+//     margin-bottom: 60px
+
+// .tutors-testimon__pagination
+//     text-align: center
+
+// .tutors-testimon__slides
+//     background: #FFFFFF
+//     box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03)
+//     border-radius: 4px
+//     padding: 5% 8.7%
+
+// .tutors-testimon__slide-content
+//     max-width: 810px
+//     width: 100%
+//     padding-left: 58px
+
+// .tutors-testimon__comment
+//     font-size: 20px
+//     line-height: 150%
+//     color: #424551
+//     margin-bottom: 24px
+//     &::before
+//         content: " "
+//         position: relative
+//         top: 30px
+//         right: 50px
+//         background: url('../../assets/images/braces.png')
+//         background-repeat: no-repeat
+//         display: block
+//         height: 28px 
+//         width: 28px
+
+// .tutors-testimon__autor-wrap
+//     display: flex
+//     align-items: center
+
+// .tutors-testimon__pic
+//     width: 72px
+//     height: 72px
+//     margin-right: 20px
+
+// .tutors-testimon__img
+// .tutors-testimon__name-wrap
+
+// .tutors-testimon__name
+//     font-weight: 700
+//     font-size: 16px
+//     line-height: 160%
+//     color: #1E212C
+
+// .tutors-testimon__course
+//     font-size: 14px
+//     line-height: 150%
+//     color: #787A80
+
+// .tutors-testimon__pagination .swiper-pagination-bullet
+//     width: 30px
+//     height: 0px
+//     border: 3px solid #B3B7BC
+//     background: #B3B7BC
+//     border-radius: 2px
+    
+// .tutors-testimon__pagination .swiper-pagination-bullet-active
+//     border: 3px solid #424551

@@ -1,0 +1,22 @@
+- const courseIcons = ['Facebook.svg', 'behance.svg', 'Twitter.svg', 'Instagram.svg'];
+
+mixin courseCurator()
+    section.curator
+        .container
+            .curator__content
+                .course__left
+                    .curator__pic
+                .course__right   
+                    .curator__head
+                        .curator__suptitle.suptitle course cirator
+                        h2.curator__title.title Cody Fisher
+                    .curator__post Senior UX designer in IT Product Company
+                    ul.curator__experience-list
+                        li.curator__experience-rate 4.9 rate
+                        li.curator__experience-courses 4 courses
+                        li.curator__experience-students 350 students
+                    p.course__description Mattis adipiscing aliquam eu proin metus a iaculis faucibus. Tempus curabitur venenatis, vulputate venenatis fermentum ante. Nisl, amet id semper semper quis commodo, consequat. Massa rhoncus sit morbi odio. Sit maecenas nibh consectetur vel diam. Sem vulputate molestie laoreet at massa sed pharetra. Ac commodo platea id habitasse proin. Nullam sit nec ipsum posuere non. Nam vel aliquam tristique sollicitudin interdum quam. 
+                    .course__icons
+                        each icon in courseIcons
+                            .course_icon
+                                img.course__icon-img(src=require(`../../assets/images/${icon}`))

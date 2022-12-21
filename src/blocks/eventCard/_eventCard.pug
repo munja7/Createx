@@ -1,0 +1,24 @@
+mixin event-card(day= day, month= month, time= time, titleText= title, taskName= takName, cls= '', greed= false)
+    if (!greed)
+        .event-card(class= cls)
+            .event-card__wrap
+                .event-card__day= day
+                .event-card__month-wrap
+                    .event-card__month= month
+                    .event-card__time= time
+            .event-card__title-wrap
+                .event-card__task-title= titleText
+                .event-card__task-type= taskName
+            a.btn-outline.btn--regular.event-card__btn(href="#") View more
+    else if (greed)
+        .event-card(class= cls)
+            .event-card__wrap
+                .event-card__day= day
+                   = month
+                .event-card__month-wrap
+                    //- .event-card__month= month
+                    .event-card__time= time
+            .event-card__title-wrap
+                .event-card__task-title= titleText
+                .event-card__task-type= taskName
+            a.btn-outline.btn--regular.event-card__btn(href="#") View more
