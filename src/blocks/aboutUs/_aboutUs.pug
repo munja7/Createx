@@ -1,0 +1,23 @@
+- 
+	const title = 
+		"Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts.";
+
+- 
+	const description = 
+		"We provide relevant approaches to online learning, internships and employment in the largest companies in the country. Our educational programs help you get a new specialty from scratch. During your studies, we will help you find a job. Check the courses and online events that we organise.";
+
+mixin aboutUs()
+	section.about-us
+		.about-us__header
+			+header
+		.container
+			.about-us__content
+				.about-us__text
+					.about-us__suptitle.suptitle about us
+					.about-us__title.title Createx Online School
+					.about-us__title-descr= title
+					.about-us__description= description
+					.about-us__buttons
+						.about-us__button.btn.btn--large.btn-outline Explore events
+						.about-us__button.btn.btn--large Browse courses
+				.about-us__pic

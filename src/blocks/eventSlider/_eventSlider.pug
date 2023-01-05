@@ -1,0 +1,29 @@
+-
+    const eventListCards = 
+        [
+            { day: '05', month: 'August', time: '11:00 – 14:00', title: 'Formation of the organizational structure of the company in the face of uncertainty.', name:'Onine master-class'},
+            { day: '24', month: 'July', time: '11:00 – 12:30', title: 'Building a customer service department. Best Practices.', name:'Onine lecture'},
+            { day: '16', month: 'July', time: '11:00 – 13:00', title: 'How to apply methods of speculative design in practice. Worldbuilding prototyping.', name:'Onine workshop'}
+        ];
+
+mixin eventSlider()
+    section.event-slider
+        .container
+            .event-slider__swiper.swiper
+                .event-slider__wrap
+                    .event-slider__head
+                        .event-slider__suptitle.suptitle Check other online events
+                        .event-slider__title.title You may be interested in
+                    .tutors-slider__arrows
+                        .tutors-slider__arrow
+                            .tutors-slider__arr-left
+                        .tutors-slider__arrow
+                            .tutors-slider__arr-right
+                .event-slider__cards.swiper-wrapper
+                    each eventTask in eventListCards
+                        .swiper-slide
+                            .event-slider__card-wrap
+                                +event-card(eventTask.day, eventTask.month, eventTask.time, eventTask.title, eventTask.name, 'events-greed__card', true)
+                .event__more-events
+                    .event-slider__text Do you want more?
+                    .event-slider__btn.btn.btn--regular Explore all events

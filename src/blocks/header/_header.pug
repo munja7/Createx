@@ -1,18 +1,18 @@
 - 
-    let navlinks = 
-    [
-        { linkName: 'About Us', link: '#' }, 
-        { linkName: 'Courses', link: '/courses.html' }, 
-        { linkName: 'Events', link: '/events.html' },
-        { linkName: 'Blog', link: '#' },
-        { linkName: 'Contacts', link: '#'}
-    ];
+    const navlinks = 
+        [
+            { linkName: 'About Us', link: '/about.html' }, 
+            { linkName: 'Courses', link: '/courses.html' }, 
+            { linkName: 'Events', link: '/eventsList.html' },
+            { linkName: 'Blog', link: '/blog.html' },
+            { linkName: 'Contacts', link: '#'}
+        ];
 
 mixin header(page='Home')
     header.header
         .container
             .header__wrap
-                a.header__logo(href="/")
+                a.header__logo(href="/index.html")
                     img.header__logo-img(src=require("../../assets/images/logo.png"), alt="logo-img")
                 nav.header-nav__list
                     each linkItem in navlinks

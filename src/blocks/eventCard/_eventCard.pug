@@ -9,16 +9,13 @@ mixin event-card(day= day, month= month, time= time, titleText= title, taskName=
             .event-card__title-wrap
                 .event-card__task-title= titleText
                 .event-card__task-type= taskName
-            a.btn-outline.btn--regular.event-card__btn(href="#") View more
+            a.btn-outline.btn--regular.event-card__btn(href="/event.html") View more
     else if (greed)
         .event-card(class= cls)
-            .event-card__wrap
-                .event-card__day= day
-                   = month
-                .event-card__month-wrap
-                    //- .event-card__month= month
-                    .event-card__time= time
-            .event-card__title-wrap
-                .event-card__task-title= titleText
-                .event-card__task-type= taskName
-            a.btn-outline.btn--regular.event-card__btn(href="#") View more
+            .event-card__greed-wrap
+                .event-card__greed-day= day
+                .event-card__greed-month= month
+            .event-card__time-greed= time
+            .event-card__greed-title= titleText
+            .event-card__greed-type= taskName
+            a.btn-outline.btn--regular.event-card__greed-btn(href="/event.html") View more

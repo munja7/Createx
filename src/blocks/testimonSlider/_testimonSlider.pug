@@ -1,57 +1,60 @@
 - 
-    let testimonial = [ 
-        { 
-            comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.',
-            img: 'image-avatar.png', 
-            name: 'Eleanor Pena',
-            course: 'Position, Course'
-        },
-        { 
-            comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.',
-            img: 'image-avatar.png', 
-            name: 'Eleanor Pena',
-            course: 'Position, Course'
-        },
-        { 
-            comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.',
-            img: 'image-avatar.png', 
-            name: 'Eleanor Pena',
-            course: 'Position, Course'
-        },
-        { 
-            comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.',
-            img: 'image-avatar.png', 
-            name: 'Eleanor Pena',
-            course: 'Position, Course'
-        },
-        { 
-            comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.',
-            img: 'image-avatar.png', 
-            name: 'Eleanor Pena',
-            course: 'Position, Course'
-        },
-    ];
+    const testimonial = 
+        [ 
+            { 
+                comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.',
+                img: 'image-avatar.png', 
+                name: 'Eleanor Pena',
+                course: 'Position, Course'
+            },
+            { 
+                comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.',
+                img: 'image-avatar.png', 
+                name: 'Eleanor Pena',
+                course: 'Position, Course'
+            },
+            { 
+                comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.',
+                img: 'image-avatar.png', 
+                name: 'Eleanor Pena',
+                course: 'Position, Course'
+            },
+            { 
+                comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.',
+                img: 'image-avatar.png', 
+                name: 'Eleanor Pena',
+                course: 'Position, Course'
+            },
+            { 
+                comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.',
+                img: 'image-avatar.png', 
+                name: 'Eleanor Pena',
+                course: 'Position, Course'
+            },
+        ];
 
 mixin testimonSlider()
-    //- .container
-    .testimon__head
-        .testimon__suptitle.suptitle TESTIMONIALS
-        .testimon__title.title What our students say
-    .testimon__container
-        .tutors-slider__arrow.tutors-testimon__arrow
-            .tutors-slider__arr-left
-        .testimonial-swiper.swiper
-            .swiper-wrapper
-                each item in testimonial
-                    .testimon__slides.swiper-slide
-                        .testimon__slide-content
-                            p.testimon__comment= item.comment
-                            .testimon__autor-wrap
-                                .testimon__pic
-                                    img.testimon__img(src=`../../assets/images/${item.img}`, alt="avatar-img")
-                                .testimon__name-wrap
-                                    .testimon__name= item.name
-                                    .testimon__course= item.course
-        .tutors-slider__arrow.tutors-testimon__arrow
-            .tutors-slider__arr-right
-    .testimon__pagination
+    .testimon
+        .testimon__decor-dots2
+        .testimon__decor-shapes2
+        .testimon__head
+            .testimon__suptitle.suptitle TESTIMONIALS
+            .testimon__title.title What our students say
+        .testimon__container
+            .tutors-slider__arrow.tutors-testimon__arrow
+                .tutors-slider__arr-left
+            .testimonial-swiper.swiper
+                .swiper-wrapper
+                    each item in testimonial
+                        .testimon__slides.swiper-slide
+                            .testimon__slide-content
+                                p.testimon__comment= item.comment
+                                .testimon__autor-wrap
+                                    .testimon__pic
+                                        img.testimon__img(src=`../../assets/images/${item.img}`, alt="avatar-img")
+                                    .testimon__name-wrap
+                                        .testimon__name= item.name
+                                        .testimon__course= item.course
+            .tutors-slider__arrow.tutors-testimon__arrow
+                .tutors-slider__arr-right
+        .testimon__pagination

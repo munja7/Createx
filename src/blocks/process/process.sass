@@ -1,41 +1,77 @@
 .process
     padding-top: 90px
+    padding-bottom: 175px
+    position: relative
+
+.process__decor-shapes-arrow
+    position: absolute
+    width: 85px
+    height: 85px
+    top: 95px
+    right: 80px
+    opacity: 0.2
+    background: url('../../assets/images/shapes-arrow.svg') no-repeat center
+    background-size: contain
+    transform: rotate(135deg)
+    filter: invert(79%) sepia(45%) saturate(834%) hue-rotate(336deg) brightness(109%) contrast(108%)
 
 .process__head
     text-align: center
-    margin-bottom: 60px
+    margin-bottom: 33px
 
 .process__suptitle
+    margin-bottom: 8px
 .process__title
 .process__steps
     display: flex
     justify-content: space-between
+    flex-wrap: wrap
     // margin: 0 -15px
-    margin-bottom: 177px
+    // margin-bottom: 177px
 
 .process__step
     width: 100%
     max-width: 285px
     // padding: 0 15px
+    &:hover
+        cursor: default
+        .process__step-num
+            color: #FF3F3A
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            background: rgba(255, 63, 58, .12)
+            border: 16px solid rgba(255, 63, 58, .06)
+            background-clip: padding-box
 
-.proecss__step-num
+.process__step-num
+    width: 116px
+    height: 116px
+    position: relative
+    left: -35px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+
+.process__step-top
+    position: relative
     font-family: 'Lato-Black'
     font-size: 46px
     line-height: 130%
     color: #D7DADD
-    margin-bottom: 16px
-    &::after
-        content: ""
-        width: 209px
-        border: 1px dashed #D7DADD
-        display: inline-block
-        position: relative
-        bottom: 15px
+
+.process__step:not(:last-child) .process__step-top::after
+    content: ""
+    width: 209px
+    position: absolute
+    border: 1px dashed #D7DADD
+    display: inline-block
+    right: 0
+    top: 50%
+
 
 .process__step-title
     font-weight: 700
     font-size: 20px
-    line-height: 150%
     color: #1E212C
     margin-bottom: 8px
 

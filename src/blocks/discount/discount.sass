@@ -1,28 +1,45 @@
 .discount
     
+
+.discount__decor-circles
+    position: absolute
+    width: 235px
+    height: 235px
+    top: -167px
+    right: 355px
+    opacity: 0.2
+    background: url('../../assets/images/circles-hollow.svg') no-repeat center
+    background-size: contain
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(229deg) brightness(104%) contrast(101%)
+    
 .discount__content
+    position: relative
     background: linear-gradient(55.95deg, rgba(255, 63, 58, 0.2) 0%, rgba(247, 94, 5, 0.2) 100%)
     padding: 48px 60px
-    margin-bottom: 180px
 
 .discount__head
     display: flex
     justify-content: space-between
     align-items: center
-    margin-bottom: 32px
+    margin-bottom: 26px
 
 .discount__title
+    font-size: 32px
+
 .discount__times
     display: flex
     justify-content: space-between
-    width: 100%
-    max-width: 182px
+    margin: 0 -12px
+
+.discount__times-wrap
+    padding: 0 12px
 
 .discount__times-num
     font-weight: 700
     font-size: 20px
     line-height: 130%
     color: #1E212C
+    margin-bottom: 4px
 
 .discount__times-text
     font-size: 12px
@@ -32,18 +49,17 @@
 .discount__form
     display: flex
     align-items: flex-end
+    justify-content: space-between
 
 .discount__label
     width: 100%
     max-width: 291px
-    display: inline-block
-    margin-right: 24px
     font-size: 14px
     line-height: 150%
     color: #424551
 
 .discount__input
-    width: 291px
+    width: 100%
     height: 44px
     padding-left: 16px
     margin-top: 8px
@@ -58,3 +74,4 @@
         color: #9A9CA5
 
 .discount__btn
+    width: 165px

@@ -1,0 +1,26 @@
+mixin slider(slides= [])
+    .tutors-slider.swiper
+        .tutors-slider__head
+            .tutors-slider__text
+                .tutors-slider__suptitle.suptitle Best tutors are all here
+                .tutors-slider__title.title Meet our team
+            .tutors-slider__arrows
+                .tutors-slider__arrow
+                    .tutors-slider__arr-left
+                .tutors-slider__arrow
+                    .tutors-slider__arr-right    
+        .tutors-slider__slides.swiper-wrapper
+            each item in slides
+                .tutors-slider__slide.swiper-slide
+                    .tutors-slider__card
+                        .tutors-slider__slide-pic
+                            img.tutors-slider__img(src=require(`../../assets/images/${item.img}`))
+                            .tutors-slider__pic-overlay
+                                a.tutors-slider__overlay-social(href='#')
+                                    img.tutors-slider__overlay-img(src=require('../../assets/images/Facebook-overlay.png') alt='facebook')
+                                a.tutors-slider__overlay-social(href='#')
+                                    img.tutors-slider__overlay-img(src=require('../../assets/images/inst-overlay.png') alt='instagram')
+                                a.tutors-slider__overlay-social(href='#')
+                                    img.tutors-slider__overlay-img(src=require('../../assets/images/linkedin-overlay.png') alt='linkedin')
+                        .tutors-slider__name= item.name
+                        .tutors-slider__post= item.post

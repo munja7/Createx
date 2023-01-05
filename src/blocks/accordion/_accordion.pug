@@ -1,0 +1,10 @@
+mixin accordion(accordionData= [], title= '')
+	.accordion
+		each item, index in accordionData
+			.accordion__item
+				button.accordion__btn(aria-expanded="false") 
+					span.accordion__icon(aria-hidden="true")
+					span.accordion__lesson= `${title} ${index+1}.`
+					.accordion__title= item.title
+				.accordion__content
+					p.accordion__text= item.text

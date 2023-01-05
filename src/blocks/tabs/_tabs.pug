@@ -1,15 +1,117 @@
-- 
-    let onlineCoursesCards = [
-        {bageColor: 'bage--green', img: 'image-service1.png', bageText: 'Marketing', title: 'The Ultimate Google Ads Training Course', price: '$100', name: 'by Jerome Bell'},
-        {bageColor: 'bage--blue', img: 'image-service2.png', bageText: 'Management', title: 'Prduct Management Fundamentals', price: '$480', name: 'by Marvin McKinney'},
-        {bageColor: 'bage--orange', img: 'image-service3.png', bageText: 'HR & Recruting', title: 'HR  Management and Analytics', price: '$200', name: 'by Leslie Alexander Li'},
-        {bageColor: 'bage--green', img: 'image-service4.png', bageText: 'Marketing', title: 'Brand Management & PR Communications', price: '$530', name: 'by Kristin Watson'},
-        {bageColor: 'bage--pink', img: 'image-service5.png', bageText: 'Design', title: 'Graphic Design Basic', price: '$500', name: 'by Guy Hawkins'},
-        {bageColor: 'bage--blue', img: 'image-service6.png', bageText: 'Management', title: 'Business Development Management', price: '$400', name: 'by Dianne Russell'},
-        {bageColor: 'bage--violet', img: 'image-service7.png', bageText: 'Development', title: 'Highload Software Architecture', price: '$600', name: 'by Brooklyn Simmons'},
-        {bageColor: 'bage--orange', img: 'image-service8.png', bageText: 'HR & Recruting', title: 'Human Resources – Selection and Recruitment', price: '$150', name: 'by Kathryn Murphy'},
-        {bageColor: 'bage--pink', img: 'image-service9.png', bageText: 'Design', title: 'User Experience. Human-centered Design', price: '$240', name: 'by Cody Fisher'}
-    ];
+-
+    const onlineCoursesCards = 
+        [
+            {
+                bageColor: 'bage--green', 
+                img: 'image-service1.png', 
+                bageText: 'Marketing', 
+                title: 'The Ultimate Google Ads Training Course', 
+                price: '$100', name: 'by Jerome Bell'
+            },
+            {
+                bageColor: 'bage--blue', 
+                img: 'image-service2.png', 
+                bageText: 'Management', 
+                title: 'Prduct Management Fundamentals', 
+                price: '$480', 
+                name: 'by Marvin McKinney'
+            },
+            {
+                bageColor: 'bage--orange', 
+                img: 'image-service3.png', 
+                bageText: 'HR & Recruting', 
+                title: 'HR  Management and Analytics', 
+                price: '$200', 
+                name: 'by Leslie Alexander Li'
+            },
+            {
+                bageColor: 'bage--green', 
+                img: 'image-service4.png', 
+                bageText: 'Marketing', 
+                title: 'Brand Management & PR Communications', 
+                price: '$530', 
+                name: 'by Kristin Watson'
+            },
+            {
+                bageColor: 'bage--pink', 
+                img: 'image-service5.png', 
+                bageText: 'Design', 
+                title: 'Graphic Design Basic', 
+                price: '$500', 
+                name: 'by Guy Hawkins'
+            },
+            {
+                bageColor: 'bage--blue', 
+                img: 'image-service6.png', 
+                bageText: 'Management', 
+                title: 'Business Development Management', 
+                price: '$400', 
+                name: 'by Dianne Russell'
+            },
+            {
+                bageColor: 'bage--violet', 
+                img: 'image-service7.png', 
+                bageText: 'Development', 
+                title: 'Highload Software Architecture', 
+                price: '$600', 
+                name: 'by Brooklyn Simmons'
+            },
+            {
+                bageColor: 'bage--orange', 
+                img: 'image-service8.png', 
+                bageText: 'HR & Recruting', 
+                title: 'Human Resources – Selection and Recruitment', 
+                price: '$150', 
+                name: 'by Kathryn Murphy'
+            },
+            {
+                bageColor: 'bage--pink', 
+                img: 'image-service9.png', 
+                bageText: 'Design', 
+                title: 'User Experience. Human-centered Design', 
+                price: '$240', 
+                name: 'by Cody Fisher'
+            }
+        ];
+
+-
+    const cardsBlog = 
+        [ 
+            {
+                img: 'image-marketing.png',
+                labelImg: 'mic.png',
+                labelText: 'Podcast',
+                name: 'Marketing',
+                date: 'September 4, 2020',
+                time: '36 min',
+                title: 'What is traffic arbitrage and does it really make money?',
+                descr: 'Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...',
+                btnText: 'Listen'
+            },
+            {
+                img: 'image-development.png',
+                labelImg: 'Files.png',
+                labelText: 'Article',
+                name: 'Development',
+                date: 'September 1, 2020',
+                time: '',
+                title: 'How to choose the first programming language for a beginner',
+                descr: 'Turpis sed at magna laoreet gravida consequat tortor placerat. Gravida vitae aliquet enim egestas dui...',
+                btnText: 'Read'
+            },
+            {
+                img: 'image-design.png',
+                labelImg: 'Play.png',
+                labelText: 'Video',
+                name: 'Design',
+                date: 'August 8, 2020',
+                time: '40 min',
+                title: 'Should you choose a creative profession if you are attracted to creativity?',
+                descr: 'Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate ultrices...',
+                btnText: 'Watch'
+            },
+            
+        ];
 
 mixin tab(tabs= [], tabPage= '')
     if tabPage === 'home-tabs'
@@ -26,6 +128,21 @@ mixin tab(tabs= [], tabPage= '')
                 label.tab__nav(for=`${index}`)
                     img.tab__pic(src=require(`../../assets/images/${item.nameImg}`))
                     span.tab__nav-text= item.name
+    else if tabPage === 'blog-tabs'
+        .blog-tab__layout
+            each item, index in tabs
+                input(name="nav" class=`${index}-radio` type="radio" id=`${index}` checked=index == 0 )
+                .blog-tab__page(class=`${index}-page`)
+                    .blog-tab__page-contents
+                        .blog-tab__content
+                            +blogCards(cardsBlog)
+                label.tab__nav(for=`${index}`)
+                    if index != 0
+                        img.tab__pic(src=require(`../../assets/images/${item.nameImg}`))
+                    span.tab__nav-text= item.name
+            form.oblog-tab__search(action="")
+                input.blog-tab__inp(type="text" placeholder="Search course...")
+                button.blog-tab__search-img(type="submit")
     else
         .courses-tab__layout
             each item, index in tabs

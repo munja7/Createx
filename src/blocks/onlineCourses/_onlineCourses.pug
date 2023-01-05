@@ -1,37 +1,39 @@
 - 
-    const courses = [
-        {
-            name: "All",
-            num: "17",
-        },
-        {
-            name: "Marketing",
-            num: "4"
-        },
-        {
-            name: "Management",
-            num: "3"
-        },
-        {
-            name: "HR & Recruting",
-            num: "5",
-        },
-        {
-            name: "Design",
-            num: "2"
-        },
-        {
-            name: "Development",
-            num: "3"
-        },
-    ];
+    const courses = 
+        [
+            {
+                name: "All",
+                num: "17",
+            },
+            {
+                name: "Marketing",
+                num: "4"
+            },
+            {
+                name: "Management",
+                num: "3"
+            },
+            {
+                name: "HR & Recruting",
+                num: "5",
+            },
+            {
+                name: "Design",
+                num: "2"
+            },
+            {
+                name: "Development",
+                num: "3"
+            },
+        ];
 
 mixin onlineCourses(page='courses')
     section.online-courses
         .online-courses__shapes
         .online-courses__dots
+        .online-courses__shapes2
+        +header
         .container
-            +header
             .online-courses__head
                 .online-courses__suptitle.suptitle Enjoy your studying!
                 .online-courses-_title.title Our online courses
@@ -41,5 +43,7 @@ mixin onlineCourses(page='courses')
                     img.online-courses__more-img(src=require('../../assets/images/Convert.png'))
                 .online-courses__text.js-online__courses Load more
     .online-courses__slider
+        .online-course__decor-circles
+        .online-course__decor-circles2
         .container
             +testimonSlider

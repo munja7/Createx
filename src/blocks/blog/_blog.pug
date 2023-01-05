@@ -1,38 +1,40 @@
-- let blogCards = [ 
-- {
-- img: 'image-marketing.png',
-- labelImg: 'mic.png',
-- labelText: 'Podcast',
-- name: 'Marketing',
-- date: 'September 4, 2020',
-- time: '36 min',
-- title: 'What is traffic arbitrage and does it really make money?',
-- descr: 'Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...',
-- btnText: 'Listen'
-- },
-- {
-- img: 'image-management.png',
-- labelImg: 'Play.png',
-- labelText: 'Video',
-- name: 'Management',
-- date: 'August 25, 2020',
-- time: '45 min',
-- title: 'What to do and who to talk to if you want to get feedback on the product',
-- descr: 'Neque a, senectus consectetur odio in aliquet nec eu. Ultricies ac nibh urna urna sagittis faucibus...',
-- btnText: 'Watch'
-- },
-- {
-- img: 'image-design.png',
-- labelImg: 'Files.png',
-- labelText: 'Article',
-- name: 'Design',
-- date: 'August 8, 2020',
-- time: '',
-- title: 'Should you choose a creative profession if you are attracted to creativity?',
-- descr: 'Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate ultrices...',
-- btnText: 'Read'
-- }
-- ];
+-
+    const blogCards = 
+        [ 
+            {
+                img: 'image-marketing.png',
+                labelImg: 'mic.png',
+                labelText: 'Podcast',
+                name: 'Marketing',
+                date: 'September 4, 2020',
+                time: '36 min',
+                title: 'What is traffic arbitrage and does it really make money?',
+                descr: 'Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...',
+                btnText: 'Listen'
+            },
+            {
+                img: 'image-management.png',
+                labelImg: 'Play.png',
+                labelText: 'Video',
+                name: 'Management',
+                date: 'August 25, 2020',
+                time: '45 min',
+                title: 'What to do and who to talk to if you want to get feedback on the product',
+                descr: 'Neque a, senectus consectetur odio in aliquet nec eu. Ultricies ac nibh urna urna sagittis faucibus...',
+                btnText: 'Watch'
+            },
+            {
+                img: 'image-design.png',
+                labelImg: 'Files.png',
+                labelText: 'Article',
+                name: 'Design',
+                date: 'August 8, 2020',
+                time: '',
+                title: 'Should you choose a creative profession if you are attracted to creativity?',
+                descr: 'Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate ultrices...',
+                btnText: 'Read'
+            }
+        ];
 
 mixin blog(page='Home')
     section.blog
@@ -42,23 +44,24 @@ mixin blog(page='Home')
                     .blog__head-suptitle.suptitle Our blog
                     .blog__head-title.title Latest posts
                 a.btn.btn--large.blog__link(href="#") Go to blog
-            .blog__cards
-                each card in blogCards
-                    .blog__card-wrap
-                        .blog__card
-                            .blog__card-pic
-                                img.blog__card-img(src=require(`../../assets/images/${card.img}`))
-                            .blog__card-label
-                                .blog__card-label-icon
-                                    img.blog__card-img(src=require(`../../assets/images/${card.labelImg}`))
-                                .blog__card-label-text= card.labelText
-                            .blog__card-timeline
-                                .blog__card-stamp.blog__card-name= card.name
-                                .blog__card-stamp.blog__card-date= card.date
-                                if (card.time.length > 0)
-                                    .blog__card-stamp.blog__card-time= card.time
-                            .blog__card-title= card.title
-                            .blog__card-descr= card.descr
-                            .blog__card-action
-                                a.blog__card-text(href="#")= card.btnText
-                                .blog__card-arrow
+            +blogCards(blogCards)
+            //- .blog__cards
+            //-     each card in blogCards
+            //-         .blog__card-wrap
+            //-             .blog__card
+            //-                 .blog__card-pic
+            //-                     img.blog__card-img(src=require(`../../assets/images/${card.img}`))
+            //-                 .blog__card-label
+            //-                     .blog__card-label-icon
+            //-                         img.blog__card-img(src=require(`../../assets/images/${card.labelImg}`))
+            //-                     .blog__card-label-text= card.labelText
+            //-                 .blog__card-timeline
+            //-                     .blog__card-stamp.blog__card-name= card.name
+            //-                     .blog__card-stamp.blog__card-date= card.date
+            //-                     if (card.time.length > 0)
+            //-                         .blog__card-stamp.blog__card-time= card.time
+            //-                 .blog__card-title= card.title
+            //-                 .blog__card-descr= card.descr
+            //-                 .blog__card-action
+            //-                     a.blog__card-text(href="#")= card.btnText
+            //-                     .blog__card-arrow

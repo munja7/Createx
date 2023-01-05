@@ -1,0 +1,54 @@
+.accordion
+
+.accordion__item
+    margin-bottom: 24px
+
+.accordion__btn[aria-expanded=true]
+    margin-bottom: 16px
+    
+.accordion__btn
+    display: flex
+    align-items: center
+    padding-left: 0px
+    &:hover, &:focus
+        cursor: pointer
+
+.accordion__lesson
+    font-size: 20px
+    line-height: 150%
+    color: #FF3F3A
+    margin-right: 5px
+
+.accordion__title
+    font-family: 'Lato-Bold'
+    font-size: 20px
+    line-height: 150%
+    color: #1E212C
+
+.accordion__icon
+    width: 20px
+    height: 20px
+    margin-right: 20px
+    background-image: url('../../assets/images/Plus.png')
+
+.accordion__btn[aria-expanded='true']
+    .accordion__icon
+        background-image: url('../../assets/images/Minus.png')
+    +.accordion__content
+        opacity: 1
+        max-height: 104px
+        margin-bottom: 16px
+        transition: all 200ms linear
+        will-change: opacity, max-height
+    
+.accordion__content
+    opacity: 0
+    max-height: 0
+    overflow: hidden
+    transition: opacity 200ms linear, max-height 200ms linear
+    will-change: opacity, max-height
+    padding-left: 40px
+    .accordion__text
+        font-size: 16px
+        line-height: 160%
+        color: #424551

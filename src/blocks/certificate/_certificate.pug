@@ -1,14 +1,28 @@
-mixin certificate(page='Home')
-    section.certificate
-        .container
-            .certificate__content
-                .certificate__text-card-wrap
-                    .certificate__suptitle.suptitle Createx Certificate
-                    .certificate__title.title Your expertise will be confirmed
-                    p.certificate__accredited We are accredited by international professional organizations and institutes:
-                    .certificate__logo-wrap
-                        .certificate__comp.certificate__del-may
-                        .certificate__comp.certificate__sentinal
-                        .certificate__comp.certificate__national
-                .certificate__pic
+mixin certificate(section= '', content= '', pic= '')
+    if (section == '' || content == '' || pic == '')
+        section.certificate(class= section)
+            .container
+                .certificate__content(class= content)
+                    .certificate__text-card-wrap
+                        .certificate__suptitle.suptitle Createx Certificate
+                        .certificate__title.title Your expertise will be confirmed
+                        p.certificate__accredited We are accredited by international professional organizations and institutes:
+                        .certificate__logo-wrap
+                            .certificate__comp.certificate__del-may
+                            .certificate__comp.certificate__sentinal
+                            .certificate__comp.certificate__national
+                    .certificate__pic(class= pic)
+    else
+        section(class= section)
+            .container
+                div(class= content)
+                    .certificate__text-card-wrap
+                        .certificate__suptitle.suptitle Createx Certificate
+                        .certificate__title.title Your expertise will be confirmed
+                        p.certificate__accredited We are accredited by international professional organizations and institutes:
+                        .certificate__logo-wrap
+                            .certificate__comp.certificate__del-may
+                            .certificate__comp.certificate__sentinal
+                            .certificate__comp.certificate__national
+                    div(class= pic)
 

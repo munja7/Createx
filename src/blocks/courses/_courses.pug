@@ -1,12 +1,55 @@
-- let cards = [
-- {bageColor: 'bage--green', img: 'image.png', bageText: 'Marketing', title: 'The Ultimate Google Ads Training Course', price: '$100', name: 'by Jerome Bell'},
-- {bageColor: 'bage--blue', img: 'image3.png', bageText: 'Management', title: 'Prduct Management Fundamentals', price: '$480', name: 'by Marvin McKinney'},
-- {bageColor: 'bage--orange', img: 'image1.png', bageText: 'HR & Recruting', title: 'HR  Management and Analytics', price: '$200', name: 'by Leslie Alexander Li'},
-- {bageColor: 'bage--green', img: 'image4.png', bageText: 'Marketing', title: 'Brand Management & PR Communications', price: '$530', name: 'by Kristin Watson'},
-- {bageColor: 'bage--blue', img: 'image2.png', bageText: 'Management', title: 'Business Development Management', price: '$400', name: 'by Dianne Russell'},
-- {bageColor: 'bage--pink', img: 'image5.png', bageText: 'Design', title: 'Graphic Design Basic', price: '$500', name: 'by Guy Hawkins'}
-- ];
-
+-
+    const cards = 
+        [
+            {
+                bageColor: 'bage--green', 
+                img: 'image.png', 
+                bageText: 'Marketing', 
+                title: 'The Ultimate Google Ads Training Course', 
+                price: '$100', 
+                name: 'by Jerome Bell'
+            },
+            {
+                bageColor: 'bage--blue', 
+                img: 'image3.png', 
+                bageText: 'Management', 
+                title: 'Prduct Management Fundamentals', 
+                price: '$480', 
+                name: 'by Marvin McKinney'
+            },
+            {
+                bageColor: 'bage--orange', 
+                img: 'image1.png', 
+                bageText: 'HR & Recruting', 
+                title: 'HR  Management and Analytics', 
+                price: '$200', 
+                name: 'by Leslie Alexander Li'
+            },
+            {
+                bageColor: 'bage--green', 
+                img: 'image4.png', 
+                bageText: 'Marketing', 
+                title: 'Brand Management & PR Communications', 
+                price: '$530', 
+                name: 'by Kristin Watson'
+            },
+            {
+                bageColor: 'bage--blue', 
+                img: 'image2.png', 
+                bageText: 'Management', 
+                title: 'Business Development Management', 
+                price: '$400', 
+                name: 'by Dianne Russell'
+            },
+            {
+                bageColor: 'bage--pink', 
+                img: 'image5.png', 
+                bageText: 'Design', 
+                title: 'Graphic Design Basic', 
+                price: '$500', 
+                name: 'by Guy Hawkins'
+            }
+        ];
 
 mixin courses(page='Home')
     section.courses
@@ -19,4 +62,4 @@ mixin courses(page='Home')
             .courses__cards
                 each card in cards
                     .cources__card-wrap
-                        +card(card.bageColor, card.img, card.bageText, card.title, card.price, card.name, 'courses__card')
+                        +card(card.bageColor, card.img, card.bageText, card.title, card.price, card.name, 'courses__card', 'courses__card-pic')

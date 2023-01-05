@@ -1,0 +1,24 @@
+- 
+	const values = 
+		[
+			{img: 'ic-structure.png', title: 'Structured Approach', descr: 'Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris.'},
+			{img: 'ic-chat.png', title: 'Professional Feedbacks', descr: 'Culpa nostrud commodo ea consequat reprehenderit aliquip.'},
+			{img: 'ic-target.png', title: 'Efficiency', descr: 'Viverra scelerisque consequat net. Adipisicing esse consequat.'},
+			{img: 'ic-calendar.png', title: 'Flexible Shedule', descr: 'Aute eiusmod dolore dolore deserunt veniam ad deserunt.'}
+		];
+
+mixin ourValues()
+	section.values
+		.container
+			.values__head
+				.values__suptitle.suptitle We always stand for
+				.values__title.title Our core values
+			.values__content
+				each value in values
+					.values__wrap
+						.values__card
+							.values__pic
+								img.values__img(src=`../../assets/images/${value.img}`)
+							.values__card-title= value.title
+							.values__card-descr= value.descr
+						.values__devider

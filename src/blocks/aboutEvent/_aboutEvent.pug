@@ -1,0 +1,39 @@
+- 
+	const eventList = 
+		[
+			{title: 'Aliquet lectus urna viverra in odio.', text: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.'},
+			{title: 'Orci commodo, viverra orci mollis ut euismod.', text: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.'},
+			{title: 'Sagittis vitae facilisi rutrum amet mauris quisque vel.', text: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.'},
+			{title: 'In id dolor quis nunc, urna hendrerit pharetra.', text: 'Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus, odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.'}
+		];
+- 
+	const boardEvent = 
+		[
+			{
+				title: 'Time', 
+				date: 'August 5, 11:00 - 14:00', 
+				text: 'Metus turpis sit lorem lacus, in elit tellus lacus.'
+			},
+			{
+				title: 'Price', 
+				date: 'Free', 
+				text: 'Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis.'
+			}
+		];
+
+mixin aboutEvent()
+	section.about-event
+		.container
+			.about-event__content
+				.about-event__left
+					h3.about-event__title.title We will talk about:
+					+accordion(eventList, 'Theme') 
+				.about-event__right
+					.about-event__board
+						each board in boardEvent
+							.about-event__board-content
+								.about-event__board-title= board.title
+								.about-event__board-date= board.date
+								.about-event__board-text= board.text
+						a.about-event__facebook(href="#") Event on Facebook
+						a.about-event__btn.btn.btn--regular(href="#") Join the course

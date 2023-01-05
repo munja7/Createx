@@ -1,0 +1,66 @@
+- 
+	const team = 
+		[
+			{
+				img: 'woman1.png',
+				name: 'Dianne Russell',
+				post: 'Founder and CEO'
+			},
+			{
+				img: 'man1.png',
+				name: 'Jerome Bell',
+				post: 'Founder and Program Director'
+			},
+			{
+				img: 'woman2.png',
+				name: 'Kristin Watson',
+				post: 'Marketer, Curator of Marketing Course'
+			},
+			{
+				img: 'man2.png',
+				name: 'Marvin McKinney',
+				post: 'PM, Curator of Management Course'
+			},
+			{
+				img: 'Jerome-image.png', 
+				name: 'Leslie Alexander Li', 
+				post: 'Curator of HR & Recruting Course'
+			},
+			{
+				img: 'Katryne-image.png', 
+				name: 'Kathryn Murphy', 
+				post: 'Analyst and Marketing specialist'
+			},
+			{
+				img: 'Brooklyn-image.png',
+				name: 'Brooklyn Simmons', 
+				post: 'Curator of Development Course'
+			},
+			{
+				img: 'Cody-image.png', 
+				name: 'Cody Fisher', 
+				post: 'UX Designer, Curator of Design Course'
+			}
+		];
+
+mixin ourTeam()
+	section.our-team
+		.container
+			.our-team__head
+				.our-team__suptitle.suptitle Best tutors are all here
+				.our-team__title.title Meet our team
+			.our-team__cards
+				each item in team
+					.our-team__card-wrap
+						.our-tem__card
+							.our-team__slide-pic
+								img.our-team__img(src=require(`../../assets/images/${item.img}`))
+								.our-team__pic-overlay
+									a.our-team__overlay-social(href='#')
+										img.our-team__overlay-img(src=require('../../assets/images/Facebook-overlay.png') alt='facebook')
+									a.our-team__overlay-social(href='#')
+										img.our-team__overlay-img(src=require('../../assets/images/inst-overlay.png') alt='instagram')
+									a.our-team__overlay-social(href='#')
+										img.our-team__overlay-img(src=require('../../assets/images/linkedin-overlay.png') alt='linkedin')
+							.our-team__name= item.name
+							.our-team__post= item.post

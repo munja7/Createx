@@ -1,0 +1,38 @@
+- 
+	const stepper = 
+		[
+			{
+				title: 'Watching online video lectures',
+				descr: 'Aliquam turpis viverra quam sit interdum blandit posuere pellentesque. Nisl, imperdiet gravida massa neque.'
+			},
+			{
+				title: 'Passing test',
+				descr: 'Facilisis pellentesque quis accumsan ultricies. Eu egestas eget feugiat lacus, amet, sollicitudin egestas laoreet etiam.'
+			},
+			{ 
+				title: 'Curator’s feedback',
+				descr: 'Eget amet, enim pharetra leo egestas nisi, odio imperdiet facilisis. Aliquet orci varius volutpat egestas facilisi lobortis.'
+			},
+			{
+				title: 'Corrections if needed',
+				descr: 'Non tempor pulvinar tincidunt aliquam. Placerat ultricies malesuada dui auctor.'
+			},
+		];
+
+mixin studyngProcess()
+	section.st-process
+		.container
+			.st-process__content
+				.st-process__stepper
+					.st-process__head
+						.st-process__suptitle.suptitle Studying process
+						.st-process__title.title That’s how we do it
+					ul.st-process__list
+						each item, index in stepper
+							.st-process__circle
+							.st-process__line 
+							li.st-process__item
+								.st-process__step= `step ${index+1}`
+								.st-process__title-step= item.title
+								.st-process__descr= item.descr
+				.st-process__pic

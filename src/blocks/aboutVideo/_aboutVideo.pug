@@ -1,0 +1,23 @@
+- 
+	const counters = 
+		[
+			{number: 1200, text: 'students graduated'},
+			{number: 84, text: 'completed courses'},
+			{number: 16, text: 'qualified tutors'},
+			{number: 5, text: 'years of experience'}
+		];
+
+mixin aboutVideo()
+	section.watch
+		.container
+			.watch__video-head
+				a.watch__video-btn(href="#")
+				.watch__video-title Watch Video
+			.watch__video-content
+				.watch__video-pic
+				.watch__counters
+					ul.watch__list
+						each item in counters
+							li.watch__item
+								.watch__num= item.number
+								.watch__text= item.text

@@ -1,74 +1,24 @@
-- let tutors = [
-- {img: 'woman1.png', name: 'Dianne Russell', post: 'Founder and CEO'},
-- {img: 'man1.png', name: 'Jerome Bell', post: 'Founder and Program Director'},
-- {img: 'woman2.png', name: 'Kristin Watson', post: 'Marketer, Curator of Marketing Course'},
-- {img: 'man2.png', name: 'Marvin McKinney', post: 'PM, Curator of Management Course'},
-- {img: 'woman1.png', name: 'Dianne Russell', post: 'Founder and CEO'},
-- {img: 'man1.png', name: 'Jerome Bell', post: 'Founder and Program Director'},
-- {img: 'woman2.png', name: 'Kristin Watson', post: 'Marketer, Curator of Marketing Course'},
-- {img: 'man2.png', name: 'Marvin McKinney', post: 'PM, Curator of Management Course'}
-- ];
 - 
+    const tutors = 
+        [
+            {img: 'woman1.png', name: 'Dianne Russell', post: 'Founder and CEO'},
+            {img: 'man1.png', name: 'Jerome Bell', post: 'Founder and Program Director'},
+            {img: 'woman2.png', name: 'Kristin Watson', post: 'Marketer, Curator of Marketing Course'},
+            {img: 'man2.png', name: 'Marvin McKinney', post: 'PM, Curator of Management Course'},
+            {img: 'woman1.png', name: 'Dianne Russell', post: 'Founder and CEO'},
+            {img: 'man1.png', name: 'Jerome Bell', post: 'Founder and Program Director'},
+            {img: 'woman2.png', name: 'Kristin Watson', post: 'Marketer, Curator of Marketing Course'},
+            {img: 'man2.png', name: 'Marvin McKinney', post: 'PM, Curator of Management Course'}
+        ];
    
 
 mixin tutors(page='Home')
     section.tutors
         .tutors__decor-dots1
-        .tutors__decor-dots2
         .tutors__decor-vector
         .tutors__decor-shapes1
-        .tutors__decor-shapes2
-        .tutors__decor-circles1
-        .tutors__decor-circles2
         .container
-            .tutors-slider.swiper
-                .tutors-slider__head
-                    .tutors-slider__text
-                        .tutors-slider__suptitle.suptitle Best tutors are all here
-                        .tutors-slider__title.title Meet our team
-                    .tutors-slider__arrows
-                        .tutors-slider__arrow
-                            .tutors-slider__arr-left
-                        .tutors-slider__arrow
-                            .tutors-slider__arr-right    
-                .tutors-slider__slides.swiper-wrapper
-                    each item in tutors
-                        .tutors-slider__slide.swiper-slide
-                            .tutors-slider__card
-                                .tutors-slider__slide-pic
-                                    img.tutors-slider__img(src=require(`../../assets/images/${item.img}`))
-                                    .tutors-slider__pic-overlay
-                                        a.tutors-slider__overlay-social(href='#')
-                                            img.tutors-slider__overlay-img(src=require('../../assets/images/facebook-overlay.png') alt='facebook')
-                                        a.tutors-slider__overlay-social(href='#')
-                                            img.tutors-slider__overlay-img(src=require('../../assets/images/inst-overlay.png') alt='instagram')
-                                        a.tutors-slider__overlay-social(href='#')
-                                            img.tutors-slider__overlay-img(src=require('../../assets/images/linkedin-overlay.png') alt='linkedin')
-                                .tutors-slider__name= item.name
-                                .tutors-slider__post= item.post
-            //testimonials slider
-            +testimonSlider
-            //- .tutors-testimon__head
-            //-     .tutors-testimon__suptitle.suptitle TESTIMONIALS
-            //-     .tutors-testimon__title.title What our students say
-            //- .tutors-testimon__container
-            //-     .tutors-slider__arrow.tutors-testimon__arrow
-            //-         .tutors-slider__arr-left
-            //-     .tutors-testimon.testimonial-swiper.swiper
-            //-         .swiper-wrapper
-            //-             each item in testimonial
-            //-                 .tutors-testimon__slides.swiper-slide
-            //-                     .tutors-testimon__slide-content
-            //-                         p.tutors-testimon__comment= item.comment
-            //-                         .tutors-testimon__autor-wrap
-            //-                             .tutors-testimon__pic
-            //-                                 img.tutors-testimon__img(src=`../../assets/images/${item.img}`, alt="avatar-img")
-            //-                             .tutors-testimon__name-wrap
-            //-                                 .tutors-testimon__name= item.name
-            //-                                 .tutors-testimon__course= item.course
-            //-     .tutors-slider__arrow.tutors-testimon__arrow
-            //-         .tutors-slider__arr-right
-            //- .tutors-testimon__pagination
+            +slider(tutors, 'tutors')
 
 
 

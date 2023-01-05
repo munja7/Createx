@@ -1,20 +1,41 @@
-mixin registerForm()
+mixin registerForm(show= '')
     .container
-        .register
-            .register__content
-                .register__pic
-                .register__wrap
-                    .register__head
-                        .register__suptitle.suptitle Leave a request now and get 20% off!
-                        .register__title.title Register for the course
-                    form.register-form(action="register-course")
-                        label.register-form__label
-                            .register-form__name Full name
-                            input.register-form__input(type="text", placeholder="Your full name", required)
-                        label.register-form__label 
-                            .register-form__name Email
-                            input.register-form__input(type="email", placeholder="Your working email", required)
-                        label.register-form__label
-                            .register-form__name Phone
-                            input.register-form__input(type="phone", placeholder="Your phone number", required)
-                        button.register-form__btn.btn.btn--large(type="submit") Join the course
+        if (show !== 'event')
+            .register
+                .register__content
+                    .register__pic
+                    .register__wrap
+                        .register__head
+                            .register__suptitle.suptitle Leave a request now and get 20% off!
+                            .register__title.title Register for the course
+                        form.register-form(action="register-course")
+                            label.register-form__label
+                                .register-form__name Full name
+                                input.register-form__input(type="text", placeholder="Your full name", required)
+                            label.register-form__label 
+                                .register-form__name Email
+                                input.register-form__input(type="email", placeholder="Your working email", required)
+                            label.register-form__label
+                                .register-form__name Phone
+                                input.register-form__input(type="phone", placeholder="Your phone number", required)
+                            button.register-form__btn.btn.btn--large(type="submit") Join the course
+        else if (show == 'event')
+            .register
+                .register__content
+                    .register__wrap
+                        .register__head
+                            .register__suptitle.suptitle Don’t miss the event
+                            .register__title.title Leave a request
+                        form.register-form(action="register-event")
+                            label.register-form__label
+                                .register-form__name Full name
+                                input.register-form__input(type="text", placeholder="Your full name", required)
+                            label.register-form__label 
+                                .register-form__name Email
+                                input.register-form__input(type="email", placeholder="Your working email", required)
+                            label.register-form__label
+                                .register-form__name Phone
+                                input.register-form__input(type="phone", placeholder="Your phone number", required)
+                            button.register-form__event-btn.btn.btn--large(type="submit") Join the event
+                            .register-form__caption * You will receive a link to the online lecture in an email after registration.
+                    .register__pic-event

@@ -1,0 +1,77 @@
+.our-team
+	padding-top: 90px
+	padding-bottom: 30px
+
+.our-team__head
+	text-align: center
+	margin-bottom: 60px
+
+.our-team__suptitle
+	margin-bottom: 8px
+
+.our-team__title
+
+.our-team__cards
+	display: flex
+	justify-content: space-between
+	text-align: center
+	flex-wrap: wrap
+
+.our-team__card-wrap
+	margin-bottom: 60px
+
+.our-tem__card
+	width: 285px
+
+.our-team__slide-pic
+	position: relative
+	padding: 20px 20px 0 20px
+	background-color: #FFCF2D
+	margin-bottom: 16px
+	&:hover
+		.our-team__pic-overlay
+			transition: height 0.4s, visibility 0s, opacity 0.4s linear
+			visibility: visible
+			opacity: 1
+			height: 100%
+
+.our-team__pic-overlay
+	display: flex
+	position: absolute
+	width: 100%
+	height: 0
+	left: 0
+	bottom: 0
+	align-items: flex-end
+	justify-content: flex-end
+	padding: 20px
+	background: linear-gradient(180deg, rgba(30, 33, 44, 0) 43.9%, rgba(30, 33, 44, 0.03) 55.21%, rgba(30, 33, 44, 0.33) 68.73%, rgba(30, 33, 44, 0.56) 76.17%, rgba(30, 33, 44, 0.768225) 83.75%, rgba(30, 33, 44, 0.92) 91.49%, #1E212C 100%)
+	border-radius: 4px
+	visibility: hidden
+	opacity: 0
+	transition: height 0.4s, visibility 0s, opacity 0.4s linear
+
+.our-team__img
+	border-radius: 4px
+	vertical-align: bottom
+
+.our-team__overlay-social
+	width: 20px
+	height: 20px
+	cursor: pointer
+
+.our-team__overlay-social:not(:last-child)
+	margin-right: 12px
+
+.our-team__overlay-img
+.our-team__name
+	font-weight: 700
+	font-size: 20px
+	line-height: 150%
+	color: #424551
+	margin-bottom: 4px
+
+.our-team__post
+	font-size: 16px
+	line-height: 160%
+	color: #787A80

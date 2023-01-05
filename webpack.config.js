@@ -36,23 +36,32 @@ module.exports = {
     },
     devtool: 'source-map',
     plugins: [
-        new MiniCssExtractPlugin({
-            filename: 'styles/[name].[contenthash].css'
-        }),
+        // new MiniCssExtractPlugin({
+        //     filename: 'styles/[name].[contenthash].css'
+        // }),
+        // new HtmlWebpackPlugin({
+        //     template: "./src/pug/pages/course.pug",
+        //     filename: "course.html"
+        // }),
+        // new HtmlWebpackPlugin({
+        //     template: "./src/pug/pages/about.pug",
+        //     filename: "about.html"
+        // }),
         // new HtmlWebpackPlugin({
         //     template: "./src/pug/pages/index.pug",
         //     filename: "index.html"
         // }),
         // new HtmlWebpackPlugin({
-        //     template: "./src/pug/pages/categories.pug",
-        //     filename: "categories.html"
-        // })
+        //     template: "./src/pug/pages/blog.pug",
+        //     filename: "blog.html"
+        // }),
         ...paths.map((path) => {
             return new HtmlWebpackPlugin({
                 template: path,
                 filename: `${path.split(/\/|.pug/).splice(-2, 1)}.html`,
             });
-        })],
+        })
+    ],
     module: {
         rules: [
             {
@@ -101,7 +110,7 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env']
+                        presets: ['@babel/preset-env'],
                     }
                 }
             }

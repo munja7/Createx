@@ -1,0 +1,60 @@
+- 
+	const teachCards = 
+		[
+			{
+				bageColor: 'bage--green',
+				img: 'teach-image1.png',
+				bageText: 'Marketing',
+				title: 'Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.'
+			},
+			{
+				bageColor: 'bage--blue', 
+				img: 'teach-image2.png',
+				bageText: 'Management',
+				title: 'Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.'
+			},
+			{
+				bageColor: 'bage--orange',
+				img: 'teach-image3.png',
+				bageText: 'HR & Recruting',
+				title: 'Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.'
+			},
+			{
+				bageColor: 'bage--pink',
+				img: 'teach-image4.png',
+				bageText: 'Design',
+				title: 'Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.'
+			},
+			{
+				bageColor: 'bage--blue',
+				img: 'teach-image5.png',
+				bageText: 'Development', 
+				title: 'Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.'
+			}
+		];
+
+mixin teach()
+	section.teach
+		.container
+			.teach__head
+				.teach__suptitle.suptitle our main directions
+				.teach__title.title What do we teach
+			.teach__content
+				.teach__cards
+					each teachCard, index in teachCards
+						.teach__card-wrap
+							.teach__card
+								.teach__card-pic
+									img.teach__card-img(
+										src=require(`../../assets/images/${teachCard.img}`),
+										alt=`${teachCard.img}`
+										)
+								.teach__card-text
+									.teach__card-bage(class= teachCard.bageColor)= teachCard.bageText
+									.teach__card-title= teachCard.title
+									button.teach__card-check Check courses
+						if (index+1 == 5)
+							.teach__card-wrap
+								.teach__last-card
+									.teach__last-card-title New studying program coming soon...
+									

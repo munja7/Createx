@@ -1,0 +1,21 @@
+mixin blogCards(cards= [])
+	.blog__cards
+		each card in cards
+			.blog__card-wrap
+				.blog__card
+					.blog__card-pic
+						img.blog__card-img(src=require(`../../assets/images/${card.img}`))
+					.blog__card-label
+						.blog__card-label-icon
+							img.blog__card-img(src=require(`../../assets/images/${card.labelImg}`))
+						.blog__card-label-text= card.labelText
+					.blog__card-timeline
+						.blog__card-stamp.blog__card-name= card.name
+						.blog__card-stamp.blog__card-date= card.date
+						if (card.time.length > 0)
+							.blog__card-stamp.blog__card-time= card.time
+					.blog__card-title= card.title
+					.blog__card-descr= card.descr
+					.blog__card-action
+						a.blog__card-text(href="#")= card.btnText
+						.blog__card-arrow

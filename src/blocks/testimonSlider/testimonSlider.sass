@@ -1,3 +1,46 @@
+.testimon
+    position: relative
+    // padding-top: 65px
+    // padding-bottom: 4.2%
+    // background-color: #F4F5F6
+
+.testimon__decor-dots2
+    position: absolute
+    width: 143px
+    height: 105px
+    background: url('../../assets/images/dots.svg')
+    bottom: 3%
+    left: 0
+
+.testimon__decor-shapes2
+    position: absolute
+    width: 87px
+    height: 47px
+    top: 6.5%
+    left: 68.3%
+    opacity: 0.6
+    background: url('../../assets/images/shapes2.svg')
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(229deg) brightness(104%) contrast(101%)
+
+// .testimon__decor-circles1
+//     position: absolute
+//     width: 145px
+//     height: 145px
+//     top: 0
+//     left: 3.9%
+//     background: url('../../assets/images/circles.svg')
+//     background-size: cover
+//     opacity: 0.6
+
+// .testimon__decor-circles2
+//     position: absolute
+//     width: 132px
+//     height: 163px
+//     bottom: 0
+//     right: 0
+//     background: url('../../assets/images/circles-quadrant.png')
+//     opacity: 0.6
+
 .testimonial-swiper
     width: 1020px
 
@@ -17,7 +60,7 @@
     align-items: center
     margin-bottom: 60px
 
-.testimon__pagination.swiper-pagination-clickable
+.testimon__container + .testimon__pagination.swiper-pagination-clickable
     position: relative
     bottom: 20px
     text-align: center
@@ -42,7 +85,7 @@
     &::before
         content: " "
         position: absolute
-        top: -1px
+        top: 0
         left: -58px
         background: url('../../assets/images/braces.png')
         background-repeat: no-repeat

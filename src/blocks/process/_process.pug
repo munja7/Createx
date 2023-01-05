@@ -1,14 +1,15 @@
 - 
     const steps = 
-    [
-        { num: '01', title: 'Watching online video lectures', descr: 'Culpa nostrud commodo ea consequat aliquip reprehenderit. Veniam velit nostrud aliquip sunt.' },
-        { num: '02', title: 'Passing test', descr: 'Anim reprehenderit sint voluptate exercitation adipisicing laborum adipisicing. Minim ad tempor est ea.' },
-        { num: '03', title: 'Curator’s feedback', descr: 'Adipisicing esse aliqua aliquip qui amet. Aute eiusmod dolore dolore et ad et veniam ad deserunt.' },
-        { num: '04', title: 'Corrections if needed', descr: 'Sit veniam aute dolore adipisicing nulla sit culpa. Minim mollit voluptate ullamco proident ea ad.' } 
-    ];
+        [
+            { num: '01', title: 'Watching online video lectures', descr: 'Culpa nostrud commodo ea consequat aliquip reprehenderit. Veniam velit nostrud aliquip sunt.' },
+            { num: '02', title: 'Passing test', descr: 'Anim reprehenderit sint voluptate exercitation adipisicing laborum adipisicing. Minim ad tempor est ea.' },
+            { num: '03', title: 'Curator’s feedback', descr: 'Adipisicing esse aliqua aliquip qui amet. Aute eiusmod dolore dolore et ad et veniam ad deserunt.' },
+            { num: '04', title: 'Corrections if needed', descr: 'Sit veniam aute dolore adipisicing nulla sit culpa. Minim mollit voluptate ullamco proident ea ad.' } 
+        ];
 
 mixin process()
     section.process
+        .process__decor-shapes-arrow
         .container
             .process__head
                 .process__suptitle.suptitle main steps
@@ -16,6 +17,7 @@ mixin process()
             .process__steps
                 each step in steps
                     .process__step
-                        .proecss__step-num= step.num
+                        .process__step-top
+                            .process__step-num= step.num
                         .process__step-title= step.title
                         .process__step-descr= step.descr

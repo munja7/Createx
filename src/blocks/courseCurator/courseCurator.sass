@@ -1,18 +1,31 @@
 .curator
+    position: relative
     padding-bottom: 90px
+
+.curator__decor-circles
+    position: absolute
+    width: 242px
+    height: 242px
+    top: -65px
+    left: 200px
+    opacity: 0.12
+    background: url('../../assets/images/circles-hollow.svg')
+    background-size: cover
+    filter: invert(79%) sepia(45%) saturate(834%) hue-rotate(336deg) brightness(109%) contrast(108%)
+
 
 .curator__content
     display: flex
     justify-content: space-between
     // align-items: center
 
-.course__left
+.curator__left
 .curator__pic
     width: 495px
     height: 600px
     background-image: url('../../assets/images/curator-image.png')
 
-.course__right   
+.curator__right   
     width: 100%
     max-width: 600px
 
@@ -21,6 +34,7 @@
     margin-bottom: 18px
 
 .curator__suptitle
+    margin-bottom: 8px
 .curator__title
 .curator__post
     font-size: 20px
@@ -35,42 +49,33 @@
     color: #424551
     margin-bottom: 32px
 
-.curator__experience-rate
+.curator__list-item
     margin-bottom: 4px
-    &:before
-        content: url('../../assets/images/star-red.png')
-        width: 16px
-        height: 16px
-        margin-right: 8px
+    @for $c from 1 through 3
+        &:nth-child(#{$c}):before
+            content: url('../../assets/images/experience-#{$c}.svg')
+            width: 16px
+            height: 16px
+            margin-right: 8px
 
-.curator__experience-courses
-    margin-bottom: 4px
-    &:before
-        content: url('../../assets/images/play-red.png')
-        width: 16px
-        height: 16px
-        margin-right: 8px
-
-.curator__experience-students
-    margin-bottom: 4px
-    &:before
-        content: url('../../assets/images/profile-red.png')
-        width: 16px
-        height: 16px
-        margin-right: 8px
-
-.course__description
+.curator__description
     font-size: 16px
     line-height: 160%
     color: #424551
     margin-bottom: 40px
 
-.course__icons
+.curator__socials
     display: flex
 
-.course_icon
+.curator_icon
     width: 24px
     height: 24px
     margin-right: 24px
 
-.course__icon-img
+    &:hover
+        .curator__icon-img
+            filter: invert(43%) sepia(61%) saturate(3835%) hue-rotate(335deg) brightness(100%) contrast(117%)
+        
+
+.curator__icon-img
+    filter: invert(48%) sepia(8%) saturate(253%) hue-rotate(187deg) brightness(98%) contrast(87%)

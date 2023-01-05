@@ -1,17 +1,27 @@
-- let otherCoursesCards = [
-- {bageColor: 'bage--green', img: 'image.png', bageText: 'Marketing', title: 'The Ultimate Google Ads Training Course', price: '$100', name: 'by Jerome Bell'},
-- {bageColor: 'bage--blue', img: 'image3.png', bageText: 'Management', title: 'Prduct Management Fundamentals', price: '$480', name: 'by Marvin McKinney'}
-- ];
+- 
+    const otherCoursesCards = 
+        [
+            {bageColor: 'bage--green', img: 'image.png', bageText: 'Marketing', title: 'The Ultimate Google Ads Training Course', price: '$100', name: 'by Jerome Bell'},
+            {bageColor: 'bage--blue', img: 'image3.png', bageText: 'Management', title: 'Prduct Management Fundamentals', price: '$480', name: 'by Marvin McKinney'}
+        ];
 
 mixin otherCourses()
     section.other-courses
         .container
-            .other-courses__head
-                .other-courses__suptitle.suptitle Check other courses
-                .other-courses__title.title You may also like
-            .other-courses__cards
-                each card in otherCoursesCards
-                    +card(card.bageColor, card.img, card.bageText, card.title, card.price, card.name, 'other-courses__card')
-            .other-courses__more-courses
-                .other-courses__text Do you want more courses?
-                .other-courses__btn.btn.btn--regular View all courses
+            .other-courses__slider.swiper
+                .other-courses__slider-wrap
+                    .other-courses__head
+                        .other-courses__suptitle.suptitle Check other courses
+                        .other-courses__title.title You may also like
+                    .tutors-slider__arrows
+                        .tutors-slider__arrow
+                            .tutors-slider__arr-left
+                        .tutors-slider__arrow
+                            .tutors-slider__arr-right 
+                .other-courses__cards.swiper-wrapper
+                    each card in otherCoursesCards
+                        .swiper-slide
+                            +card(card.bageColor, card.img, card.bageText, card.title, card.price, card.name, 'other-courses__card', 'other-courses__card-pic')
+                .other-courses__more-courses
+                    .other-courses__text Do you want more courses?
+                    .other-courses__btn.btn.btn--large View all courses

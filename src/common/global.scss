@@ -238,6 +238,43 @@ img {
 .bage--violet{
   background: #7772F1;
 }
+
+.home__testimon{
+  position: relative;
+  background-color: #F4F5F6;
+  padding-top: 65px;
+  padding-bottom: 4.2%;
+}
+
+.home__testimon-decor-circles{
+  position: absolute;
+  width: 145px;
+  height: 145px;
+  top: 0;
+  left: 3.9%;
+  background: url('../assets/images/circles.svg');
+  background-size: cover;
+  opacity: 0.6;
+}
+
+.home__testimon-decor-circles2{
+  position: absolute;
+  width: 132px;
+  height: 163px;
+  bottom: 0;
+  right: 0;
+  background: url('../assets/images/circles-hollow.svg');
+  opacity: 0.6;
+  filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(229deg) brightness(104%) contrast(101%);
+}
+
+.about__slider{
+  position: relative;
+  background-color: #F4F5F6;
+  padding-top: 65px;
+  padding-bottom: 4.2%;
+}
+  
   
 // .description-text
 //   font-family: $font-circular

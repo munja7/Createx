@@ -1,0 +1,32 @@
+- 
+	const logoImg = 
+		[
+			'inDepth.png',
+			'higher.png',
+			'logo1.png',
+			'happy.png',
+			'orSail.png',
+			'sunset.png',
+			'atlantis.png',
+			'logo3.png',
+			'complete.png',
+			'logo2.png',
+			'ultimate.png',
+			'united.png'
+		];
+
+mixin studentsWork()
+	section.st-work
+		.container
+			.st-work__head
+				.st-work__suptitle.suptitle best jobs for you
+				.st-work__title.title Our students work here
+			.st-work__cards
+				each item, index in logoImg
+					.st-work__card-wrap
+						.st-work__card
+							.st-work__pic
+								img.st-work__img(
+									src=require(`../../assets/images/${logoImg[index]}`),
+									alt=`logo-${index}`
+									)
