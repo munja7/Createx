@@ -1,11 +1,11 @@
-- 
+-
     const navlinks = 
         [
             { linkName: 'About Us', link: '/about.html' }, 
             { linkName: 'Courses', link: '/courses.html' }, 
             { linkName: 'Events', link: '/eventsList.html' },
             { linkName: 'Blog', link: '/blog.html' },
-            { linkName: 'Contacts', link: '#'}
+            { linkName: 'Contacts', link: '/contacts.html'}
         ];
 
 mixin header(page='Home')
@@ -22,9 +22,9 @@ mixin header(page='Home')
                     a.header__link.btn.btn--large(href="#") Get consultation
                     .header__actions
                         .header__profile-icon
-                        button.header__login(type="button") Log in
+                        a.header__login(class="popup-with-form" href="#signin-form") Log in
                         span /
-                        button.header__registration(type="button") Register
+                        a.header__registration(class="popup-with-form" href="#signup-form") Register
 
 
            

@@ -253,6 +253,7 @@ img {
   top: 0;
   left: 3.9%;
   background: url('../assets/images/circles.svg');
+  filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(169deg) brightness(105%) contrast(100%);
   background-size: cover;
   opacity: 0.6;
 }
@@ -274,7 +275,14 @@ img {
   padding-top: 65px;
   padding-bottom: 4.2%;
 }
-  
+
+.post{
+  padding-top: 20px;
+}
+
+.contacts-info{
+  padding-top: 20px;
+}
   
 // .description-text
 //   font-family: $font-circular

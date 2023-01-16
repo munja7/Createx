@@ -1,10 +1,10 @@
 .tab__layout
   display: grid
-  height: 100%
   width: 100%
   overflow: hidden
   grid-template-rows: 46px 1fr
   grid-template-columns: repeat(4, 1fr)
+  //   height: 100%
 
 input[type="radio"]
   display: none
@@ -102,12 +102,13 @@ input[type="radio"]:checked + .tab__page
 // courses tabs
 .courses-tab__layout
     display: grid
-    height: 100%
     width: 100%
-    overflow: hidden
     grid-template-rows: 46px 1fr
     grid-template-columns: repeat(6, min-content)
-    margin-bottom: 80px
+    overflow-x: clip
+    margin-bottom: 80px    
+    // height: 100%
+    
 
 .courses-tab__page
     grid-column-start: 1
@@ -167,6 +168,7 @@ input[type="radio"]:checked + .tab__page
     position: relative
     display: flex
     justify-content: flex-end
+    margin: 0
 
 .online-courses__inp
     width: 315px
@@ -179,7 +181,6 @@ input[type="radio"]:checked + .tab__page
     border: 1px solid #D7DADD
     border-radius: 4px
     outline: none 
-
     &::focus
         color: #424551  
 
@@ -208,12 +209,129 @@ input[type="radio"]:checked + .courses-tab__page
 
 //blog tabs
 .blog-tab__layout
+    display: grid
+    height: 100%
+    width: 100%
+    overflow: hidden
+    grid-template-rows: 46px 1fr
+    grid-template-columns: repeat(4, min-content)
+    margin-bottom: 80px
+
 .blog-tab__page
+    grid-column-start: 1
+    grid-row-start: 2
+    grid-column-end: none
+
+.blog-tab__page-contents > *
+    opacity: 0
+    transform: translateY(20px)
+    transition: opacity 0.2s, transform 0.2s
+    transition-delay: 0.3s
+
 .blog-tab__page-contents
+    width: 100%
+    padding-top: 60px
+
 .blog-tab__content
-.tab__nav
-.tab__pic
-.tab__nav-text
-.oblog-tab__search
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.blog-tab__nav
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 0 20px
+    margin-right: 12px
+    cursor: pointer 
+    user-select: none
+    &:hover 
+        .blog-tab__nav-text
+            color: #424551
+    
+    input[type="radio"]:checked + .blog-tab__page + & 
+        border: 1px solid #FF3F3A
+        border-radius: 4px
+        .blog-tab__nav-text
+            color: #FF3F3A
+
+.blog-tab__pic
+    margin-right: 8px
+
+.blog-tab__nav-text
+    color: #9A9CA5
+    font-family: 'Lato-Bold'
+    font-weight: 700
+    font-size: 16px
+    line-height: 160%
+    white-space: nowrap
+
+.blog-tab__search
+    position: relative
+    display: flex
+    justify-content: flex-end
+    align-items: center
+
+.blog-tab__category
+    font-family: 'Lato-Bold'
+    font-size: 16px
+    line-height: 160%
+    color: #424551
+    margin-right: 12px
+
+.blog-tab__cat-select
+    width: 160px
+    height: 44px
+    padding: 0 16px
+    font-family: 'Lato'
+    font-size: 14px
+    line-height: 150%
+    color: #424551
+    border: 1px solid #D7DADD
+    border-radius: 4px
+    outline: none 
+    margin-right: 41px 
+    appearance: none
+    background: url('../../assets/images/Down-chevron.png') no-repeat right
+    background-position-x: calc(100% - 16px)
+    &::focus
+        color: #424551 
+
+.blog-tab__cat-option
+    padding: 12px 0 
+
 .blog-tab__inp
+    width: 315px
+    height: 44px
+    padding: 0 16px
+    font-family: 'Lato'
+    font-size: 14px
+    color: #424551
+    border: 1px solid #D7DADD
+    border-radius: 4px
+    outline: none 
+    &::focus
+        color: #424551  
+
+.blog-tab__inp::placeholder
+    color: #9A9CA5
+
 .blog-tab__search-img
+    position: absolute
+    width: 16px
+    height: 16px
+    top: 50%
+    right: 16px
+    transform: translateY(-50%)
+    background-image: url('../../assets/images/search.svg')
+    cursor: pointer
+
+input[type="radio"] + .blog-tab__page 
+    transition: transform 0.2s
+    transform: translateX(100%)
+
+input[type="radio"]:checked + .blog-tab__page 
+    transform: translateX(0%)
+    .blog-tab__page-contents > *
+        opacity: 1
+        transform: translateY(0px)

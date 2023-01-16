@@ -1,0 +1,45 @@
+-
+	const contaacts = 
+		[ 
+			{
+				img: 'Chat-red.png', 
+				title: 'Talk to us:', 
+				text: 'hello@createx.com'
+			},
+			{
+				img: 'iPhone-red.png', 
+				title: 'Call us:', 
+				text: '(405) 555-0128'
+			},
+			{
+				img: 'outline-red.png', 
+				title: 'Address:', 
+				text: '2464 Royal Ln. Mesa, New Jersey 45463, USA'
+			}
+		];
+
+- const socialImg = ['Facebook.png', 'twitter-black.png'];
+
+mixin contactsInfo
+	.contacts
+		.container
+			.contacts__content
+				.contacts__left-sb
+					.contacts__suptitle.suptitle Contact info
+					h2.contcts__title.title Get in touch
+					ul.contacts__list
+						each contact in contaacts
+							li.contacts__item
+								.contacts__wrap
+									.contacts__pic
+										img.contacts__img(src=require(`../../assets/images/${contact.img}`), alt="contact-img")
+									.contacts__text
+										.contacts__title= contact.title
+										.contacts__text= contact.text
+					.contacts__social-title Follow us:
+					.contacts__socils
+						each icon in socialImg
+							.contacts__icon
+								img.contacts__icon-img(src=require(`../../assets/images/${icon}`))
+				.contacts__map-pic
+

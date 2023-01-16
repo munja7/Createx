@@ -1,29 +1,27 @@
 mixin eventFilter(color= '')
-	section.filter
-		.container
-			.filter__wrap
-				form.filter-form(action="filter")
-					.filter-form__label
-						.filter-form__title Event category
+	.filter
+		.filter__wrap
+			form.filter-form(action="filter")
+				label.filter-form__label  Event category
 					select.filter-form__select(name="category")
+						option.filter-form__option(value="all themes") all themes
 						option.filter-form__option(value="master-class") master-class
 						option.filter-form__option(value="lecture") lecture
-					.filter-form__label
-						.filter-form__title Sort by
+				label.filter-form__label Sort by
 					select.filter-form__select(name="sort")
 						option.filter-form__option(value="newest") newest
 						option.filter-form__option(value="oldest") oldest
-					.filter-form__label
-						.filter-form__title Show
-						input.filter-form__num(name="show", type="number", min="1", max="4", value="1")
-						.filter-form__pages events per page
-				form.filter-form__search(action="")
-					input.filter-form__inp(type="text" placeholder="Search course...")
-					button.filter-form__search-img(type="submit")
-				.filter-form__view
-					if (color == 'red')
-						.filter-form__list-red
-						.filter-form__greed
-					else
-						.filter-form__list
-						.filter-form__greed-red
+				label.filter-form__label Show
+					.filter-form__num-wrap
+						input.filter-form__num(name="show", type="number", min="1", max="20", value="9")
+					span events per page
+			form.filter-form__search(action="")
+				input.filter-form__inp(type="text" placeholder="Search course...")
+				button.filter-form__search-img(type="submit")
+			.filter-form__view
+				if (color == 'red')
+					a.filter-form__list-red(href="/eventsList.html")
+					a.filter-form__greed(href="/eventsGreed.html")
+				else
+					a.filter-form__list(href="/eventsList.html")
+					a.filter-form__greed-red(href="/eventsGreed.html")

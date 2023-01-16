@@ -1,17 +1,71 @@
-- 
+-
 	const eventGreedTask = 
 		[
-			{ day: '05', month: 'August', time: '11:00 – 14:00', title: 'Formation of the organizational structure of the company in the face of uncertainty.', name:'Onine master-class'},
-			{ day: '24', month: 'July', time: '11:00 – 12:30', title: 'Building a customer service department. Best Practices.', name:'Onine lecture'},
-			{ day: '16', month: 'July', time: '11:00 – 13:00', title: 'How to apply methods of speculative design in practice. Worldbuilding prototyping.', name:'Onine workshop'},
-			{ day: '10', month: 'July', time: '09:00 – 14:00', title: 'Find and evaluate: search and assessment tools for candidates.', name:'Onine workshop'},
-			{ day: '27', month: 'June', time: '15:00 – 19:30', title: 'Connection to Microsoft Excel and Google Sheets, Data Visualization in Power BI.', name:'Onine master-class'},
-			{ day: '15', month: 'June', time: '10:00 – 12:00', title: 'Marketing or growth hacking: main differences and what business needs.', name:'Onine lecture'},
-			{ day: '02', month: 'June', time: '11:00 – 13:00', title: 'How to brief a client and present your design to approve it from the first show.', name:'Onine lecture'},
-			{ day: '29', month: 'May', time: '11:00 – 12:00', title: 'Who is a project manager and do I want to be PM?', name:'Onine lecture'},
-			{ day: '18', month: 'May', time: '10:00 – 12:00', title: "The company's business page as an additional tool to support the announcement of vacancies.", name:'Onine lecture'}
+			{ 
+				day: '05', 
+				month: 'August', 
+				time: '11:00 – 14:00', 
+				title: 'Formation of the organizational structure of the company in the face of uncertainty.', 
+				name:'Onine master-class'
+			},
+			{ 
+				day: '24', 
+				month: 'July', 
+				time: '11:00 – 12:30', 
+				title: 'Building a customer service department. Best Practices.', 
+				name:'Onine lecture'
+			},
+			{ 
+				day: '16', 
+				month: 'July', 
+				time: '11:00 – 13:00', 
+				title: 'How to apply methods of speculative design in practice. Worldbuilding prototyping.', 
+				name:'Onine workshop'
+			},
+			{ 
+				day: '10', 
+				month: 'July', 
+				time: '09:00 – 14:00', 
+				title: 'Find and evaluate: search and assessment tools for candidates.', 
+				name:'Onine workshop'
+			},
+			{ 
+				day: '27', 
+				month: 'June', 
+				time: '15:00 – 19:30', 
+				title: 'Connection to Microsoft Excel and Google Sheets, Data Visualization in Power BI.', 
+				name:'Onine master-class'
+			},
+			{ 
+				day: '15', 
+				month: 'June', 
+				time: '10:00 – 12:00', 
+				title: 'Marketing or growth hacking: main differences and what business needs.', 
+				name:'Onine lecture'
+			},
+			{ 
+				day: '02', 
+				month: 'June', 
+				time: '11:00 – 13:00', 
+				title: 'How to brief a client and present your design to approve it from the first show.', 
+				name:'Onine lecture'
+			},
+			{ 
+				day: '29', 
+				month: 'May', 
+				time: '11:00 – 12:00', 
+				title: 'Who is a project manager and do I want to be PM?', 
+				name:'Onine lecture'
+			},
+			{ 
+				day: '18', 
+				month: 'May', 
+				time: '10:00 – 12:00', 
+				title: "The company's business page as an additional tool to support the announcement of vacancies.", 
+				name:'Onine lecture'
+			}
 		];
-- const paginateGreed = [1, 2, 3, 4];
+// - const paginateGreed = [1, 2, 3, 4];
 
 mixin eventGreed()
 	section.event-greed
@@ -28,6 +82,7 @@ mixin eventGreed()
 							.events-greed__card-wrap
 								+event-card(eventTask.day, eventTask.month, eventTask.time, eventTask.title, eventTask.name, 'events-greed__card', true)
 				.events-paginate
-					each page in paginateGreed
-						.events-paginate__item= page
-					.events-paginate__right
+					+paginate()
+					//- each page in paginateGreed
+					//- 	.events-paginate__item= page
+					//- .events-paginate__right

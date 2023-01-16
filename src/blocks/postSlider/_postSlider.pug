@@ -1,0 +1,54 @@
+-
+	const postCards = 
+		[ 
+			{
+				img: 'podcast-image.png',
+				labelImg: 'mic.png',
+				labelText: 'Podcast',
+				name: 'Design',
+				date: 'July 28, 2020',
+				time: '36 min',
+				title: 'What are color profiles and how they work in graphic design',
+				descr: 'Aliquam vulputate hendrerit quam sollicitudin urna enim viverra gravida. Consectetur urna arcu eleifend...',
+				btnText: 'Listen'
+			},
+			{
+				img: 'image-development.png',
+				labelImg: 'Files.png',
+				labelText: 'Article',
+				name: 'Development',
+				date: 'September 1, 2020',
+				time: '',
+				title: 'How to choose the first programming language for a beginner',
+				descr: 'Turpis sed at magna laoreet gravida consequat tortor placerat. Gravida vitae aliquet enim egestas dui...',
+				btnText: 'Read'
+			},
+			{
+				img: 'image-design.png',
+				labelImg: 'Files.png',
+				labelText: 'Article',
+				name: 'Design',
+				date: 'August 8, 2020',
+				time: '',
+				title: 'Should you choose a creative profession if you are attracted to creativity?',
+				descr: 'Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate ultrices...',
+				btnText: 'Read'
+			},
+		];
+
+mixin postSlider
+	section.post-slider
+		.container
+			.post-slider__head
+				.post-slider__text
+					.post-slider__suptitle.suptitle Our blog
+					.post-slider__title.title You may also like
+				.tutors-slider__arrows
+					.tutors-slider__arrow
+						.tutors-slider__arr-left
+					.tutors-slider__arrow
+						.tutors-slider__arr-right
+			+blogCards(postCards)
+			.post-slider__foot
+				.post-slider__foot-title Do you want more articles, podcasts and videos?
+				.post-slider__btn.btn.btn--large Go to blog

@@ -1,0 +1,26 @@
+- const span = '<a href="#" class="signin__spantxt">Sign in</a>'
+.signup.mfp-hide.white-popup-block#signup-form
+	form.signup__form(id="" class="")
+		h2.signup__title Sign up
+		.signup__suptitle Registration takes less than a minute but gives you full control over your studying.
+		label.signup__label(for="name") Full Name
+		input.signup__input.register-form__input(name="name" type="text" placeholder="Your full name" required="")
+		label.signup__label(for="name") Email
+		input.signup__input.register-form__input(name="email" type="email" placeholder="Your working email" required="")
+		label.signup__label(for="password") Password
+		input.signup__input.register-form__input(name="password" type="password" required="")
+		label.signup__label(for="password") Confirm Password
+		input.signup__input.register-form__input(name="password" type="password" required="")
+		.signup__check-content
+			.signup__check-wrap
+				input.signup__check(type="checkbox")
+				.signup__check-text Remember me
+		button.signup__btn.btn.btn--large(type="submit") Sign up
+		.signup__account Already have an account?  !{span}
+		.signup__close(id="sign-up-close")
+	.signup__footer
+		.signup__footer-title Or sign in with
+		.signup__footer-icons
+			each icon in icons = ['Facebook.png', 'Google.png']
+				.signup__footer-icon
+					img.signup__footer-img(src=require(`../../assets/images/${icon}`))

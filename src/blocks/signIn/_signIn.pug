@@ -1,0 +1,23 @@
+- const span = '<a href="#" class="signin__spantxt">Sign up</a>'
+.signin.mfp-hide.white-popup-block#signin-form
+	form.signin__form(id="" class="")
+		h2.signin__title Sign in
+		.signin__suptitle Sign in to your account using email and password provided during registration.
+		label.signin__label(for="name") Email
+		input.signin__input.register-form__input(name="name" type="text" placeholder="Your working email" required="")
+		label.signin__label(for="password") Password
+		input.signin__input.register-form__input(name="password" type="password" required="")
+		.signin__check-content
+			.signin__check-wrap
+				input.signin__check(type="checkbox")
+				.signin__check-text Keep me signed in
+			a.signin__forgot(href="#") Forgot password?
+		button.signin__btn.btn.btn--large(type="submit") Sign in
+		.signin__account Don't have an account? !{span}
+		.signin__close(id="close")
+	.signin__footer
+		.signin__footer-title Or sign in with
+		.signin__footer-icons
+			each icon in icons = ['Facebook.png', 'Google.png']
+				.signin__footer-icon
+					img.signin__footer-img(src=require(`../../assets/images/${icon}`))

@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const globule = require("globule");
-const fs = require("fs");
+// const fs = require("fs");
 
 let mode = 'development'
 if (process.env.NODE_ENV === 'production') {
@@ -43,24 +43,32 @@ module.exports = {
         //     template: "./src/pug/pages/course.pug",
         //     filename: "course.html"
         // }),
-        // new HtmlWebpackPlugin({
-        //     template: "./src/pug/pages/about.pug",
-        //     filename: "about.html"
-        // }),
-        // new HtmlWebpackPlugin({
-        //     template: "./src/pug/pages/index.pug",
-        //     filename: "index.html"
-        // }),
+        new HtmlWebpackPlugin({
+            template: "./src/pug/pages/eventsList.pug",
+            filename: "eventsList.html"
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/pug/pages/index.pug",
+            filename: "index.html"
+        }),
         // new HtmlWebpackPlugin({
         //     template: "./src/pug/pages/blog.pug",
         //     filename: "blog.html"
         // }),
-        ...paths.map((path) => {
-            return new HtmlWebpackPlugin({
-                template: path,
-                filename: `${path.split(/\/|.pug/).splice(-2, 1)}.html`,
-            });
-        })
+        // new HtmlWebpackPlugin({
+        //     template: "./src/pug/pages/post.pug",
+        //     filename: "post.html"
+        // }),
+        // new HtmlWebpackPlugin({
+        //     template: "./src/pug/pages/contacts.pug",
+        //     filename: "contacts.html"
+        // }),
+        // ...paths.map((path) => {
+        //     return new HtmlWebpackPlugin({
+        //         template: path,
+        //         filename: `${path.split(/\/|.pug/).splice(-2, 1)}.html`,
+        //     });
+        // })
     ],
     module: {
         rules: [

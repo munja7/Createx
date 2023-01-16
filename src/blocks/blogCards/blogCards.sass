@@ -1,11 +1,43 @@
+// .blog__cards
+//     display: flex
+//     margin: 0 -15px
+//     flex-wrap: wrap
+
 .blog__cards
-    display: flex
-    margin: 0 -15px
-    flex-wrap: wrap
+    display: grid
+    width: 100%
+    grid-template-areas:  "A A A A   B B B B   C C C C" "D D D D   D D D E   E E E E" "F F F F   G G G G   H H H H"
+    grid-gap: 30px
+    margin: 0
+
+.blog__card:nth-child(8n + 1)
+    grid-area: A 
+
+.blog__card:nth-child(8n + 2)
+    grid-area: B 
+
+.blog__card:nth-child(8n + 3)
+    grid-area: C 
+
+.blog__card:nth-child(8n + 4)
+    grid-area: D
+    
+.blog__card:nth-child(8n + 5) 
+    grid-area: E
+
+.blog__card:nth-child(8n + 6)
+    grid-area: F 
+
+.blog__card:nth-child(8n + 7)
+    grid-area: G 
+
+.blog__card:nth-child(8n + 8)
+    grid-area: H
 
 .blog__card-wrap
     width: calc(100% / 3)
     padding: 0 15px
+    margin-bottom: 60px
     
 .blog__card
     width: 100%

@@ -5,11 +5,26 @@
 
 .events__decor-circles
     position: absolute
-    width: 225px
-    height: 150px
-    top: 0
+    width: 224px
+    height: 284px
+    top: -15%
     right: 0
-    background: url('../../assets/images/events-circles.png') no-repeat 0 100%
+    background: url('../../assets/images/circles.svg') no-repeat 
+    background-size: cover
+    filter: invert(100%) sepia(39%) saturate(1%) hue-rotate(245deg) brightness(105%) contrast(101%)
+    opacity: 0.2
+
+.events__decor-dots
+    position: absolute
+    width: 160px
+    height: 116px
+    bottom: 0
+    left: 0
+    background: url('../../assets/images/dots.svg') no-repeat
+    background-size: cover
+    transform: rotate(90deg)
+    opacity: 0.8
+    filter: invert(100%) sepia(39%) saturate(1%) hue-rotate(245deg) brightness(105%) contrast(101%)
 
 .events__wrap-title
     text-align: center

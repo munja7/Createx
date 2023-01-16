@@ -5,6 +5,7 @@ import "./otherCourses";
 import "./slider";
 import "./testimonSlider";
 import "./eventSlider";
+import "./paginate";
 
 import "./main";
 import "./about";
@@ -45,6 +46,13 @@ import "./ourTeam";
 import "./studentsWork";
 import "./ourBlog";
 import "./blogCards";
+import "./blogSubscribe";
+import "./singlePost";
+import "./postSlider";
+import "./contactInfo";
+import './questions';
+import './signIn';
+import "./signup";
 
 export default () => {
   console.log('init blocks');

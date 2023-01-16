@@ -1,0 +1,14 @@
+mixin blogSubscribe()
+    section.blog-subscribe
+        .container
+            .blog-subscribe__content
+                .blog-subscribe__pic
+                .blog-subscribe__righ-wrap
+                    .blog-subscribe__title Want to get the best articles weekly? Subscribe to our newsletter!
+                    form.blog-subscribe__form(action="blog-subscribe")
+                        .event-subscribe__inp-wrap
+                            input.blog-subscribe__inp(type="email", placeholder="Your working email")
+                            button.blog-subscribe__btn.btn.btn--large(type="submit") Subscribe
+                        .blog-subscribe__check-wrap
+                            input.blog-subscribe__check(type="checkbox")
+                            .blog-subscribe__check-text I agree to receive communications from Createx Online School

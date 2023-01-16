@@ -1,0 +1,30 @@
+mixin questions
+	.question
+		.container
+			.question__content-wrap
+				.question__pic
+				.question__content
+					.question__suptitle.suptitle Any questions?
+					.question__title.title Drop us a line
+					form.question__form(action="question.php")
+						.question__names-wrap
+							label.register-form__label.question-form__label
+								.register-form__name First Name*
+								input.register-form__input(type="text", placeholder="Your first name", required)
+							label.register-form__label.question-form__label
+								.register-form__name Last  Name*
+								input.register-form__input(type="text", placeholder="Your last name", required)
+						.question__userdata-wrap
+							label.register-form__label.question-form__label
+								.register-form__name Email*
+								input.register-form__input(type="email", placeholder="Your working email", required)
+							label.register-form__label.question-form__label
+								.register-form__name Phone
+								input.register-form__input(type="phone", placeholder="Your phone number", required)
+						label.register-form__label.question-form__label-txt
+							.register-form__name Message*
+							textarea.register-form__input.question__textarea(type="phone", placeholder="Your message", required)
+						.question-subscribe__check-wrap
+							input.question-subscribe__check(type="checkbox")
+							.question-subscribe__check-text I agree to receive communications from Createx Online School
+							button.question-form__btn.btn.btn--large(type="submit") Send message

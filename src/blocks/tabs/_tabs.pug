@@ -110,7 +110,61 @@
                 descr: 'Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate ultrices...',
                 btnText: 'Watch'
             },
-            
+            {
+                img: 'recruting-image.jpg',
+                labelImg: 'Files.png',
+                labelText: 'Article',
+                name: 'HR & Recruting',
+                date: 'August 3, 2020',
+                time: '',
+                title: 'HR statistics: job search,  interviews, hiring and recruiting',
+                descr: 'Massa, lectus nibh consectetur aliquet nunc risus aenean. Leo hac netus bibendum diam adipiscing aenean nisl. Molestie nullam ante mattis ac sit vitae pellentesque mi etiam. Morbi commodo tempor, massa vivamus. A molestie id semper fermentum pretium...',
+                btnText: 'Read'
+            },
+            {
+                img: 'management-middle-image.png',
+                labelImg: 'Play.png',
+                labelText: 'Video',
+                name: 'Management',
+                date: 'August 2, 2020',
+                time: '45 min',
+                title: 'What to do and who to talk to if you want to get feedback on the product',
+                descr: 'Neque a, senectus consectetur odio in aliquet nec eu. Ultricies ac nibh urna urna sagittis faucibus. Curabitur nisl tincidunt eros venenatis...',
+                btnText: 'Watch'
+            },
+            {
+                img: 'podcast-image.png',
+                labelImg: 'mic.png',
+                labelText: 'Podcast',
+                name: 'Design',
+                date: 'July 28, 2020',
+                time: '36 min',
+                title: 'What are color profiles and how they work in graphic design',
+                descr: 'Aliquam vulputate hendrerit quam sollicitudin urna enim viverra gravida. Consectetur urna arcu eleifend...',
+                btnText: 'Listen'
+            },
+            {
+                img: 'management-image.png',
+                labelImg: 'Play.png',
+                labelText: 'Video',
+                name: 'Management',
+                date: 'July 15, 2020',
+                time: '45 min',
+                title: 'Startup: how to build a team that will live longer than a year',
+                descr: 'Nisi, massa ut sit faucibus et diam. Faucibus at malesuada at justo scelerisque in nisi, urna...',
+                btnText: 'Watch'
+            },
+            {
+                img: 'marketing-image.jpg',
+                labelImg: 'Files.png',
+                labelText: 'Article',
+                name: 'Marketing',
+                date: 'July 9, 2020',
+                time: '',
+                title: 'How to get customers to love your business from the start',
+                descr: 'Malesuada in augue mi feugiat morbi a aliquet enim. Elementum lacus, pellentesque etiam arcu tristique ac...',
+                btnText: 'Read'
+            },
         ];
 
 mixin tab(tabs= [], tabPage= '')
@@ -136,11 +190,17 @@ mixin tab(tabs= [], tabPage= '')
                     .blog-tab__page-contents
                         .blog-tab__content
                             +blogCards(cardsBlog)
-                label.tab__nav(for=`${index}`)
+                label.blog-tab__nav(for=`${index}`)
                     if index != 0
-                        img.tab__pic(src=require(`../../assets/images/${item.nameImg}`))
-                    span.tab__nav-text= item.name
-            form.oblog-tab__search(action="")
+                        img.blog-tab__pic(src=require(`../../assets/images/${item.nameImg}`))
+                    span.blog-tab__nav-text= item.name
+            form.blog-tab__search(action="", method="")
+                .blog-tab__category Blog category
+                select.blog-tab__cat-select(name="category")
+                    option.blog-tab__cat-option(value="all themes", selected) all themes
+                    option.blog-tab__cat-option(value="all themes", selected) Marketing
+                    option.blog-tab__cat-option(value="all themes", selected) Development
+                    option.blog-tab__cat-option(value="all themes", selected) Design
                 input.blog-tab__inp(type="text" placeholder="Search course...")
                 button.blog-tab__search-img(type="submit")
     else

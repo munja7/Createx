@@ -1,46 +1,56 @@
 .filter
 .filter__wrap
 	display: flex
-	justify-content: space-between
 	align-items: center
-	margin-bottom: 60px
 
 .filter-form
 	display: flex
+	margin: 0
+	margin-right: 40px
 
 .filter-form__label
 	display: flex
 	align-items: center
+	font-family: 'Lato-Bold'
+	font-size: 16px
+	
+	line-height: 160%
+	color: #424551
 	// margin-right: 30px
 	// &:last-of-type
 	//   margin-right: 0
 
 .filter-form__title
-	font-family: 'Lato-Bold'
-	font-size: 16px
-	margin-right: 12px
-	line-height: 160%
-	color: #424551
+	// font-family: 'Lato-Bold'
+	// font-size: 16px
+	// margin-right: 12px
+	// line-height: 160%
+	// color: #424551
 
 .filter-form__select
 	width: 160px
 	height: 44px
 	margin-right: 40px
+	margin-left: 12px
 	background: #FFFFFF
 	border: 1px solid #D7DADD
 	border-radius: 4px
 	padding-left: 16px
+	appearance: none
+	background: url('../../assets/images/Down-chevron.svg') no-repeat
+	background-position: calc(100% - 16px) center
 
-// .filter-form__select::after
-//   width: 16px
-//   height: 16px
-//   background: #FFF url('../../assets/images/Down-chevron.png') no-repeat center / cover
-//   position: absolute
-//   right: 20px
-//   bottom: 50%
-//   transform: translateY(50%)
-//   content: ''
-//   display: block
+.filter-form__num-wrap
+	position: relative	
+	margin: 0 12px
+	&::before,
+	&::after
+		display: block
+		content: ''
+		position: absolute
+		width: 16px
+		height: 8px
+		right: 16px
 
 .filter-form__num
 	width: 72px
@@ -48,24 +58,37 @@
 	background: #FFFFFF
 	border: 1px solid #D7DADD
 	border-radius: 4px
-	margin-right: 12px
 	padding-left: 16px
+
+.filter-form__num-wrap::before
+	top: 14px
+	background: url('../../assets/images/up-down-select.svg')
+
+.filter-form__num-wrap::after
+	bottom: 14px
+	background: url('../../assets/images/up-down-select.svg')
+	background-position: 0 -8px
 
 .filter-form__option
 	font-size: 14px
 	line-height: 150%
 	color: #424551
 
-.filter-form__pages
+.filter-form__label span
 	font-size: 14px
 	line-height: 150%
 	color: #787A80
+
+// .filter-form__pages
+// 	font-size: 14px
+// 	line-height: 150%
+// 	color: #787A80
 
 .filter-form__search
 	position: relative
 	display: flex
 	justify-content: flex-end
-	margin-right: 30px
+	margin: 0
 
 .filter-form__inp
 	width: 282px
@@ -90,6 +113,7 @@
 
 .filter-form__view
 	display: flex
+	margin-left: auto
 
 .filter-form__list-red
 	width: 28px
