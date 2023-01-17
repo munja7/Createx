@@ -64,6 +64,12 @@ img {
   width: 100%;
   height: auto;
 }
+
+input:focus,
+select:focus,
+textarea:focus{
+  outline: none;
+}
   
 
 .container{
