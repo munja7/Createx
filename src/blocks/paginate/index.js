@@ -50,7 +50,7 @@ import "./paginate.sass";
 const ul = document.querySelector('.paginate__list');
 let allPages = 15;
 
-console.log('paginate');
+console.log(window.location.pathname);
 
 function elem(allPages, page){
     console.log('paginate-inner');
@@ -103,4 +103,5 @@ function elem(allPages, page){
 
     console.log('paginate-last'); 
 }
-elem(allPages, 1);
+if(window.location.pathname === '/eventsList.html' || window.location.pathname === '/eventsGreed.html')
+    elem(allPages, 1);

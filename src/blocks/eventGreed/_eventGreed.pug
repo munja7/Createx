@@ -75,12 +75,13 @@ mixin eventGreed()
 				.event-greed__title-wrap
 					.event-greed__suptitle.suptitle our events
 					h2.event-greed__title.title Lectures, workshops & master-classes
-				.event-greed__filter
-					+eventFilter()
+				.event-list__wrap
+					.event-list__filter
+						+eventFilter()
 					.events-greed__cards
 						each eventTask in eventGreedTask
 							.events-greed__card-wrap
-								+event-card(eventTask.day, eventTask.month, eventTask.time, eventTask.title, eventTask.name, 'events-greed__card', true)
+								+event-card(eventTask.day, eventTask.month.slice(0,3), eventTask.time, eventTask.title, eventTask.name, 'events-greed__card', true)
 				.events-paginate
 					+paginate()
 					//- each page in paginateGreed

@@ -4,7 +4,5 @@ import initBlocks from './blocks';
 import $ from "jquery";
 
 $(() => {
-  initLayout();
   initBlocks();
-  initPages();
 });

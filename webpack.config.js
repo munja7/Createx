@@ -39,13 +39,13 @@ module.exports = {
         // new MiniCssExtractPlugin({
         //     filename: 'styles/[name].[contenthash].css'
         // }),
+        // new HtmlWebpackPlugin({
+        //     template: "./src/pug/pages/eventsList.pug",
+        //     filename: "eventsList.html"
+        // }),
         new HtmlWebpackPlugin({
-            template: "./src/pug/pages/course.pug",
-            filename: "course.html"
-        }),
-        new HtmlWebpackPlugin({
-            template: "./src/pug/pages/eventsList.pug",
-            filename: "eventsList.html"
+            template: "./src/pug/pages/event.pug",
+            filename: "event.html"
         }),
         new HtmlWebpackPlugin({
             template: "./src/pug/pages/index.pug",
