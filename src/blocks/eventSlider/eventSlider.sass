@@ -1,7 +1,18 @@
 .event-slider
+    position: relative
     background: #F4F5F7
     padding-top: 100px
     padding-bottom: 180px
+
+.event-slider__circle
+    width: 172px
+    height: 153px
+    position: absolute
+    bottom: 0
+    right: 0
+    background: url('../../assets/images/circles-hollow.svg') 
+    filter: invert(100%) sepia(62%) saturate(0%) hue-rotate(190deg) brightness(108%) contrast(100%)
+    opacity: 0.4
 
 .event-slider__wrap
     display: flex
@@ -18,7 +29,6 @@
     margin-bottom: 80px
 
 .event-slider__card-wrap
-    padding: 0 15px
     width: 100%
     
 .event__more-events

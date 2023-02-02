@@ -44,8 +44,8 @@ module.exports = {
         //     filename: "eventsList.html"
         // }),
         new HtmlWebpackPlugin({
-            template: "./src/pug/pages/event.pug",
-            filename: "event.html"
+            template: "./src/pug/pages/about.pug",
+            filename: "about.html"
         }),
         new HtmlWebpackPlugin({
             template: "./src/pug/pages/index.pug",

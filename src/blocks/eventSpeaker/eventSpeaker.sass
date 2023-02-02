@@ -1,12 +1,49 @@
 .speaker
+    position: relative
     padding-bottom: 90px
-    margin-bottom: 90px
+
+.speaker__circles
+    position: absolute
+    width: 242px
+    height: 242px
+    top: -10%
+    left: 10%
+    opacity: 0.12
+    background: url('../../assets/images/circles-hollow.svg')
+    background-size: cover
+    filter: invert(78%) sepia(99%) saturate(801%) hue-rotate(329deg) brightness(101%) contrast(102%)
+
+.speaker__shapes
+    position: absolute
+    width: 88px
+    height: 47px
+    top: 0
+    right: 9%
+    opacity: 0.2
+    background: url('../../assets/images/shapes2.svg')
+    background-size: cover
+    filter: invert(78%) sepia(99%) saturate(801%) hue-rotate(329deg) brightness(101%) contrast(102%)
+    transform: rotate(-30deg)
+
+.speaker__dots
+    position: absolute
+    width: 139px
+    height: 101px
+    bottom: 8%
+    left: -2.5%
+    opacity: 0.8
+    background: url('../../assets/images/dots.svg')
+    background-size: cover
+    filter: invert(78%) sepia(99%) saturate(801%) hue-rotate(329deg) brightness(101%) contrast(102%)
+    transform: rotate(45deg)
 
 .speaker__content
     display: flex
     justify-content: space-between
 
 .speaker__left
+    z-index: 10
+    
 .speaker__pic
     width: 495px
     height: 600px
@@ -30,42 +67,35 @@
     color: #787A80
     margin-bottom: 32px
 
-.speaker__experience-list
+.speaker__logos-list
     display: flex
-    justify-content: space-between
     margin-bottom: 40px
-    width: 100%
-    max-width: 395px
 
-.speaker__experience-delmar 
+.speaker__logo
     width: 105px
     height: 50px
-    background-image: url('../../assets/images/logo3.png')
-
-.speaker__experience-sentinal
-    width: 105px
-    height: 50px
-    background-image: url('../../assets/images/logo1.png')
-
-.speaker__experience-national
-    width: 105px
-    height: 50px
-    background-image: url('../../assets/images/logo2.png')
-
+    margin-right: 40px
+    @for $c from 1 through 3
+        &:nth-child(#{$c})
+            background: url('../../assets/images/logo#{$c}.png') no-repeat
+            
 .speaker__description 
     font-size: 16px
     line-height: 160%
     color: #424551
     margin-bottom: 40px
 
-.speaker__icons
+.speaker__socials
     display: flex
 
-.speaker_icon
+.speaker__social
     width: 24px
     height: 24px
     margin-right: 24px
 
-.speaker__icon-img
+.speaker__social-icon
+    filter: invert(50%) sepia(8%) saturate(258%) hue-rotate(187deg) brightness(93%) contrast(88%)
+    &:hover
+        filter: invert(38%) sepia(91%) saturate(3083%) hue-rotate(339deg) brightness(99%) contrast(102%)
 
     

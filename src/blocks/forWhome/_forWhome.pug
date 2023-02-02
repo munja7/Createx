@@ -16,22 +16,23 @@
 
 mixin forWhome(show= '')
     section.forWhome
+        .whome__arr
         .container
             if (show !== 'event')
                 .whome__content
                     .whome__left
-                        .whome__left-suptitle.suptitle for whome ?
-                        h2.whome__left-title.title Who will benefit from the course:
+                        .whome__suptitle.suptitle for whome ?
+                        h2.whome__title.title Who will benefit from the course:
                     .whome__right
-                        ul.whome__right-list
+                        ul.whome__list
                             each item in whomeCourse
-                                li.whome__right-item= item
+                                li.whome__item= item
             else if (show == 'event')
                 .whome__content
                     .whome__left
-                        .whome__left-suptitle.suptitle for whome ?
-                        h2.whome__left-title.title Who will benefit from the event:
+                        .whome__suptitle.suptitle for whome ?
+                        h2.whome__title.title Who will benefit from the event:
                     .whome__right
-                        ul.whome__right-list
+                        ul.whome__list
                             each item in whomeEvent
-                                li.whome__right-item= item
+                                li.whome__item= item

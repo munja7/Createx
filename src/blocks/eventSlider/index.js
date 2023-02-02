@@ -7,6 +7,7 @@ import 'swiper/css/pagination';
 
  const eventSlider = new Swiper(".event-slider__swiper", {
    slidesPerView: 3,
+   spaceBetween: 30,
    loop: true,
    navigation: {
        nextEl: '.tutors-slider__arr-right',

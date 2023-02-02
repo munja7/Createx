@@ -1,22 +1,25 @@
-- const eventIcons = ['Facebook.svg', 'behance.svg', 'Twitter.svg', 'instagram.svg'];
+- const eventIcons = ['Facebook.svg', 'instagram.svg', 'Twitter.svg', 'Linked-In.svg'];
 
 mixin eventSpeaker()
     section.speaker
+        .speaker__circles
+        .speaker__shapes
+        .speaker__dots
         .container
             .speaker__content
                 .speaker__left
-                    .speaker__pic
+                    .speaker__pic 
                 .speaker__right   
                     .speaker__head
                         .speaker__suptitle.suptitle Speaker
                         h2.speaker__title.title Kathryn Murphy
                     .speaker__post Analyst and Marketing specialist in IT company
                     p.speaker__description Mattis adipiscing aliquam eu proin metus a iaculis faucibus. Tempus curabitur venenatis, vulputate venenatis fermentum ante. Nisl, amet id semper semper quis commodo, consequat. Massa rhoncus sit morbi odio. Sit maecenas nibh consectetur vel diam. Sem vulputate molestie laoreet at massa sed pharetra. Ac commodo platea id habitasse proin. Nullam sit nec ipsum posuere non. Nam vel aliquam tristique sollicitudin interdum quam.  
-                    ul.speaker__experience-list
-                        li.speaker__experience-delmar 
-                        li.speaker__experience-sentinal
-                        li.speaker__experience-national
-                    .speaker__icons
+                    ul.speaker__logos-list
+                        li.speaker__logo
+                        li.speaker__logo
+                        li.speaker__logo
+                    .speaker__socials
                         each icon in eventIcons
-                            .speaker_icon
-                                img.speaker__icon-img(src=require(`../../assets/images/${icon}`))
+                            .speaker__social
+                                img.speaker__social-icon(src=require(`../../assets/images/${icon}`))
