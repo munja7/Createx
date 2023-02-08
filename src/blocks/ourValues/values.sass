@@ -12,14 +12,25 @@
 .values__title
 .values__content
 	display: flex
-	margin: 0 -45px
+	justify-content: space-between
 
 .values__wrap
-	padding: 0 45px
+	width: 100%
+	max-width: 240px
+	position: relative
+
+.values__wrap:not(:last-child)::after
+		display: block
+		content: ''
+		height: 100%
+		width: 1px
+		position: absolute
+		top: 0
+		right: -45px
+		background: linear-gradient(rgba(218, 219, 221, 0) 0%,rgba(218, 219, 221, 0.5) 12.33%,#DADBDD 51.91%,rgba(218, 219, 221, 0.5) 87.85%,rgba(218, 219, 221, 0) 100%)
 
 .values__card
 	width: 100%
-	max-width: 240px
 	text-align: center
 
 .values__pic
@@ -30,8 +41,7 @@
 
 .values__img
 .values__card-title
-	font-family: 'Lato'
-	font-weight: 700
+	font-family: 'Lato-Bold'
 	font-size: 20px
 	line-height: 150%
 	color: #1E212C
@@ -41,9 +51,3 @@
 	font-size: 16px
 	line-height: 160%
 	color: #787A80
-
-.values__devider
-	width: 162px
-	height: 0px
-	transform: rotate(90deg)
-	background: linear-gradient(270.01deg, rgba(218, 219, 221, 0) 0%, rgba(218, 219, 221, 0.5) 12.33%, #DADBDD 51.91%, rgba(218, 219, 221, 0.5) 87.85%, rgba(218, 219, 221, 0) 100%)

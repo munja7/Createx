@@ -12,7 +12,7 @@ mixin ourValues()
 		.container
 			.values__head
 				.values__suptitle.suptitle We always stand for
-				.values__title.title Our core values
+				h2.values__title.title Our core values
 			.values__content
 				each value in values
 					.values__wrap
@@ -21,4 +21,3 @@ mixin ourValues()
 								img.values__img(src=`../../assets/images/${value.img}`)
 							.values__card-title= value.title
 							.values__card-descr= value.descr
-						.values__devider

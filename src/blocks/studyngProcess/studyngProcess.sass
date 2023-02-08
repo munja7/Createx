@@ -1,6 +1,18 @@
 .st-process
-	padding-top: 90px
+	position: relative
+	padding-top: 80px
 	padding-bottom: 90px
+
+.st-process__circles
+	position: absolute
+	width: 142px
+	height: 242px
+	top: -12px
+	right: 0
+	background: url('../../assets/images/circles-hollow.svg')
+	filter: invert(66%) sepia(91%) saturate(378%) hue-rotate(358deg) brightness(107%) contrast(101%) 
+	background-size: cover
+	opacity: 0.12
 
 .st-process__head
 	margin-bottom: 60px
@@ -19,19 +31,33 @@
 	align-self: flex-end
 	
 .st-process__list
-	position: relative
+	padding-left: 3px
 
 .st-process__item
-	margin-bottom: 32px
+	position: relative
+	padding-bottom: 32px
 	padding-left: 40px
+	border-left: 1px solid #9A9CA5
 	&:last-child
-		margin-bottom: 0
+		padding-bottom: 0
+	&::before
+		content: ""
+		display: inline-block
+		position: absolute
+		width: 8px
+		height: 8px
+		left: -8px
+		top: -3px
+		background: #FF3F3A
+		border-radius: 50%
+		border: 4px solid #FFFFFF
 
 .st-process__step
 	font-family: 'Lato-Black'
 	font-size: 12px
 	line-height: 150%
 	color: #787A80
+	text-transform: uppercase
 	margin-bottom: 2px
 
 .st-process__title-step
@@ -52,21 +78,3 @@
 	max-width: 525px
 	height: 620px
 	background-image: url('../../assets/images/studyng-image.png')
-
-.st-process__circle
-	width: 8px
-	height: 8px
-	background: #FF3F3A
-	border-radius: 50%
-	// border: 4px solid #FFFFFF
-
-.st-process__line
-	position: absolute
-	width: 531px
-	height: 0px
-	left: -261px
-	top: 274px
-	opacity: 0.5
-	border: 1px solid #9A9CA5
-	transform: rotate(90deg)
-

@@ -1,16 +1,36 @@
 .watch
-	padding-top: 90px
-	padding-bottom: 90px
+	position: relative
+	padding: 90px 0
+
+.watch__dots
+	position: absolute
+	width: 136px
+	height: 100px
+	bottom: 6%
+	left: 13.3%
+	background: url('../../assets/images/dots.svg')
+	filter: invert(66%) sepia(91%) saturate(378%) hue-rotate(358deg) brightness(107%) contrast(101%)
+	background-size: cover
+	opacity: 0.8
+
+.watch__shapes
+	position: absolute
+	width: 88px
+	height: 47px
+	bottom: -3.5%
+	right: 7.5%
+	background: url('../../assets/images/shapes2.svg')
+	filter: invert(66%) sepia(91%) saturate(378%) hue-rotate(358deg) brightness(107%) contrast(101%)
+	background-size: cover
+	opacity: 0.2
+	transform: rotate(-30deg)
 
 .watch__video-head
 	display: flex
 	align-items: center
 	margin-bottom: 32px
 
-.watch__video-btn
-	width: 52px
-	height: 52px
-	background-image: url('../../assets/images/btn-play-small.png')
+.watch__btn
 	margin-right: 16px
 
 .watch__video-title
@@ -49,7 +69,7 @@
 	margin-right: 16px
 
 .watch__text
-	font-weight: 700
+	font-family: 'Lato-Bold'
 	font-size: 18px
 	line-height: 150%
 	color: #1E212C

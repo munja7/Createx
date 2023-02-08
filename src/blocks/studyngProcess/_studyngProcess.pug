@@ -21,6 +21,7 @@
 
 mixin studyngProcess()
 	section.st-process
+		.st-process__circles
 		.container
 			.st-process__content
 				.st-process__stepper
@@ -29,8 +30,6 @@ mixin studyngProcess()
 						.st-process__title.title That’s how we do it
 					ul.st-process__list
 						each item, index in stepper
-							.st-process__circle
-							.st-process__line 
 							li.st-process__item
 								.st-process__step= `step ${index+1}`
 								.st-process__title-step= item.title
