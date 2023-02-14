@@ -210,7 +210,6 @@ input[type="radio"]:checked + .courses-tab__page
 //blog tabs
 .blog-tab__layout
     display: grid
-    height: 100%
     width: 100%
     overflow: hidden
     grid-template-rows: 46px 1fr
@@ -233,9 +232,9 @@ input[type="radio"]:checked + .courses-tab__page
     padding-top: 60px
 
 .blog-tab__content
-    display: flex
-    align-items: center
-    justify-content: space-between
+    // display: flex
+    // align-items: center
+    // justify-content: space-between
 
 .blog-tab__nav
     display: flex
@@ -254,9 +253,14 @@ input[type="radio"]:checked + .courses-tab__page
         border-radius: 4px
         .blog-tab__nav-text
             color: #FF3F3A
+        .blog-tab__pic
+            filter: invert(27%) sepia(100%) saturate(2444%) hue-rotate(344deg) brightness(123%) contrast(101%)
 
 .blog-tab__pic
+    width: 16px
+    height: 16px
     margin-right: 8px
+    filter: invert(68%) sepia(5%) saturate(398%) hue-rotate(192deg) brightness(90%) contrast(95%)
 
 .blog-tab__nav-text
     color: #9A9CA5
@@ -301,7 +305,7 @@ input[type="radio"]:checked + .courses-tab__page
     padding: 12px 0 
 
 .blog-tab__inp
-    width: 315px
+    width: 285px
     height: 44px
     padding: 0 16px
     font-family: 'Lato'

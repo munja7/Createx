@@ -1,38 +1,28 @@
-// .blog__cards
-//     display: flex
-//     margin: 0 -15px
-//     flex-wrap: wrap
 
 .blog__cards
     display: grid
-    width: 100%
-    grid-template-areas:  "A A A A   B B B B   C C C C" "D D D D   D D D E   E E E E" "F F F F   G G G G   H H H H"
-    grid-gap: 30px
-    margin: 0
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(3,1fr)
+    column-gap: 30px
+    row-gap: 60px
 
-.blog__card:nth-child(8n + 1)
-    grid-area: A 
-
-.blog__card:nth-child(8n + 2)
-    grid-area: B 
-
-.blog__card:nth-child(8n + 3)
-    grid-area: C 
+.blog .blog__cards
+    display: flex
 
 .blog__card:nth-child(8n + 4)
-    grid-area: D
+    display: grid
+    grid-column-start: 1
+    grid-column-end: 3
+    grid-row: 2
+    max-width: 87%
     
 .blog__card:nth-child(8n + 5) 
-    grid-area: E
-
-.blog__card:nth-child(8n + 6)
-    grid-area: F 
-
-.blog__card:nth-child(8n + 7)
-    grid-area: G 
-
-.blog__card:nth-child(8n + 8)
-    grid-area: H
+    display: grid
+    grid-column-start: 2
+    grid-column-end: 4
+    grid-row: 2
+    justify-self: end
+    width: 60%
 
 .blog__card-wrap
     width: calc(100% / 3)
@@ -49,6 +39,9 @@
     height: 300px
     margin-bottom: 20px
 
+.blog-tab__content .blog__card-pic
+    width: 100%
+
 .blog__card-img
 .blog__card-label
     padding: 0 8px
@@ -64,6 +57,7 @@
     width: 16px
     height: 16px
     margin-right: 4px
+    filter: invert(29%) sepia(22%) saturate(282%) hue-rotate(190deg) brightness(88%) contrast(97%)
 
 .blog__card-label-text
     font-size: 14px

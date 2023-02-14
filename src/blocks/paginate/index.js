@@ -103,5 +103,5 @@ function elem(allPages, page){
 
     console.log('paginate-last'); 
 }
-if(window.location.pathname === '/eventsList.html' || window.location.pathname === '/eventsGreed.html')
+if(window.location.pathname === '/eventsList.html' || window.location.pathname === '/eventsGreed.html'|| window.location.pathname === '/blog.html')
     elem(allPages, 1);
